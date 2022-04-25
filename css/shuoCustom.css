@@ -1,0 +1,11 @@
+/*说说自定义*/
+
+#artitalk_main .cbp_tmtimeline>li .cbp_tmlabel{
+    font-size: 1.1em !important;
+}
+
+#artitalk_main p.shuoshuo_time{
+    font-size: 0.9em !important;
+    border-top: none !important;
+}
+

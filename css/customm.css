@@ -1,0 +1,504 @@
+@font-face {
+    font-family: 'xiangsu';
+    src: url('./ZCOOLKuaiLe-Regular.ttf');
+    font-display: swap
+}
+@font-face {
+    font-family: 'Candy';
+    src: url('./ZCOOLKuaiLe-Regular.ttf');
+    font-display: swap
+}
+@font-face{
+    font-family:'zc' ;  /* 字体名自定义即可 */
+    src:url('./ZCOOLKuaiLe-Regular.ttf') ; /* 字体文件路径 */
+    font-display : swap;
+  }
+
+.card-widget.card-info .play-bottom{
+    height:0 !important;
+}
+
+#artitalk_main .shuoshuo_text{
+      background-image: url(https://tva1.sinaimg.cn/large/006BdrJkgy1gtapoqtrifg30340340t0.gif)!important;
+  }
+
+#recent-posts>.recent-post-item,.layout_page>div:first-child:not(.recent-posts),.layout_post>#page,.layout_post>#post,.read-mode .layout_post>#post {
+        /* background: var(--light_bg_color) */
+        background: rgba(255,255,255,.15)
+    }
+    
+#aside-content .card-widget{
+        /* background: var(--light_bg_color) */
+        background: transparent;
+        -webkit-box-shadow: none; 
+        -moz-transition: none;
+        -o-transition: none;
+        -ms-transition: none
+    }
+    [data-theme='light'].layout > div:first-child:not(.recent-posts){
+        background: white !important
+    }
+    
+    /* #web_bg {
+        background: linear-gradient(90deg,rgba(247,149,51,.1),rgba(243,112,85,.1) 15%,rgba(239,78,123,.1) 30%,rgba(161,102,171,.1) 44%,rgba(80,115,184,.1) 58%,rgba(16,152,173,.1) 72%,rgba(7,179,155,.1) 86%,rgba(109,186,130,.1))
+    } */
+    /*顶栏*/
+    #page-header.nav-visible #nav{
+        border-radius: 16px;
+    }
+
+    @media screen and (max-width:776px) {
+        #page-header.nav-visible #nav{
+            width:95%;
+        }
+        div#nav-right{
+            display:none !important;
+        }
+    }
+    nav
+    span#name{
+        z-index:102;
+    }
+    div#he-plugin-simple{
+        z-index:102;
+    }
+
+    #page-header #nav #nav-right {
+        position: absolute;
+        right: 80px;
+        top: 10px;
+        z-index: 102
+    }
+    #nav.hide-menu #toggle-menu {
+        right:0;
+        width:0px;
+        position: absolute;
+        top: -4px;
+    }
+
+    @media screen and (max-width:776px){
+        #he-plugin-simple[data-v-41ba7e2c]{
+            display: none;
+        }
+    }
+    [data-theme="dark"] #he-plugin-simple[data-v-41ba7e2c]{
+        display: none;
+    } 
+
+    #nav #search-button {
+        display: inline;
+        padding: 0 .4rem 0 .4rem
+    }
+
+    #darkmode_navswitch {
+        display: inline;
+        padding: 0 .4rem 0 .4rem;
+        position: relative
+    }
+
+    [data-theme='light'] #nav{
+        font-size:1.4em !important;
+        background: transparent;
+    }
+    [data-theme='dark'] #nav{
+        background: transparent !important;
+    }
+
+    [data-theme='dark'] #nav a{
+        color:rgba(255,255,255,0.7) !important;
+    }
+
+    [data-theme='light'] #nav a{
+        color:#4c4948 !important;
+        text-shadow:none !important;
+    }
+
+    #nav #blogname{
+        text-shadow: none !important;
+    }
+
+    #nav #menus {
+        display: flex;
+        justify-content: center;
+        width: 97%;
+        position: absolute;
+        height: 60px;
+        top: 8px
+    }
+    #nav .menus_items {
+        position: relative;
+        left: 0;
+        right: 0
+    }
+    
+    #nav .menus_items .menus_item {
+        padding: 0 .2rem
+    }
+    
+    #menus>div.menus_items>div>a {
+        padding-left: 1.5rem;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    #menus>div.menus_items>div.menu_item>a.site-page>span{
+        font-family: cursive !important ;   
+    } 
+
+    #page-header #nav #nav-dark{
+        position:absolute;
+        top:14px;
+        right: 40px;
+    }
+
+    #nav.hide-menu #toggle-menu{
+        top:10px;
+        right:40px;
+    }
+
+    #nav .menus_items .menus_item .menus_item_child{
+        border-radius: 16px;
+    }
+
+    /*页脚*/
+    #footer {
+        background: rgba(255,255,255,.15);
+        color: #000;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        backdrop-filter: saturate(100%) blur(5px)
+    }
+    
+    #article-container img{
+        margin: 0;
+    }
+
+    #footer::before {
+        background: rgba(255,255,255,.15)
+    }
+    
+    #footer #footer-wrap {
+        color: var(--font-color)
+    }
+    
+    #footer #footer-wrap a {
+        color: var(--font-color)
+    }
+
+
+    /*文字样式*/
+
+    .item-headline a{
+        font-family: "HarmonyOS_Regular",'Candy';
+    }
+    .card-widget.card-info{
+        font-family: "HarmonyOS_Regular";
+    }
+
+    /* #aside-content .card-info .author-info__name{
+        font-family: 'Candy',auto;
+        font-weight: bold;
+    } */
+    #article-container pre code{
+        font-family: "HarmonyOS_Regular",'Candy'!important;
+        font-weight: bold;
+        color: black;
+        font-size: 15px;
+    }
+    #article-container pre, #article-container figure.highlight{
+        font-size: 15px !important;
+        color :#a9bfe3 !important;
+        font-weight: bold;
+    }
+
+    /* #aside-content .card-info .author-info__description {
+        font-family:'Candy','xiangsu',auto;
+        font-weight: bold;
+      } */
+
+    a#site-name {
+        font-family: "HarmonyOS_Regular",'Candy','xiangsu','zc', 'FontAwesome', cursive !important;
+    }
+    h1#site-title{
+        font-family: "HarmonyOS_Regular",'Candy','zc',楷体;
+    }
+    
+
+    span#blog_name{
+        font-family: "HarmonyOS_Regular",'Candy','xiangsu','zc', 'FontAwesome', cursive;
+    }
+
+
+
+    a{
+        font-family: "HarmonyOS_Regular",'xiangsu',楷体,'zc', 'FontAwesome', cursive;
+        font-weight: bold;
+        color: #4c4948;
+    }
+
+
+    span{
+        font-family: "HarmonyOS_Regular",'Candy','xiangsu',楷体,'zc', 'FontAwesome', cursive;
+        font-weight: bold;
+    }
+
+    body{
+        font-family: "HarmonyOS_Regular",'xiangsu',楷体,'zc', 'FontAwesome', cursive;
+        font-weight: bold;
+    }
+
+    mytag{
+        font-family: "HarmonyOS_Regular",'xiangsu','zc', cursive;
+        font-weight: bold;
+    }
+
+    cnt{
+        font-family: "HarmonyOS_Regular",'xiangsu',楷体,'zc',cursive;
+        font-weight: bold;
+        color:#A9BFE3;
+        font-size: 30px;
+    }
+
+    #local-search .search-dialog .local-search-box input{
+        font-weight: bold;
+    }
+
+
+    cnt1{
+        font-family: "HarmonyOS_Regular",'xiangsu',楷体,'zc',cursive;
+        font-weight: bold;
+    }
+
+    @media screen and (min-width:776px) {
+        #rightside button{
+            margin-right: 8px;
+        }
+        #rightside > div > button, #rightside > div > a{
+            margin-bottom: 5px;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            font-size: 20px;
+        }
+        #rightside #rightside-config-hide{
+          transform: translate(55px, 0);
+        }
+        #rightside{
+            right:-30px;
+        }
+    }
+
+
+    #operare_artitalk .at_button, #artitalk_main .at_button{
+        font-family: "HarmonyOS_Regular",'xiangsu',楷体;
+        font-weight: bold;
+        background-color: white !important;
+        color:#A9BFE3 !important;
+        font-size: 16px !important;
+    }
+
+    #artitalk_main .shuoshuo_text {
+        font-weight: bold;
+    }
+
+    .v[data-class=v] .veditor{
+        font-weight: bold;
+    }
+
+    .v[data-class=v] .vheader input{
+        font-weight: bold;
+    }
+
+    #artitalk_main .cbp_tmtimeline>li .cbp_tmlabel{
+        font-family: "HarmonyOS_Regular",'xiangsu',楷体;
+        font-weight: bold !important;
+    }
+
+    .v[data-class=v] .vinfo button {
+        font-weight: bold;
+    }
+
+    .fa-add:before, .fa-plus:before {
+        content: "\2b"!important;
+    }
+
+    /*嘉然*/
+    .pio-action .pio-home {
+        display: none !important;
+    }
+    .pio-action .pio-close {
+        display: none !important;
+    }
+    .pio-action .pio-info {
+        display: none !important;
+    }
+    .pio-action .pio-night {
+        display: none !important;
+    }
+    /*鼠标样式*/
+    /* 全局默认鼠标指针 
+    body,
+    html{
+    cursor: url('https://cdn.jsdelivr.net/gh/Wadehl/web-data/mouse/light/pointer.cur'),auto !important;
+    }*/
+
+    /* 鼠标样式 */
+    /*body {
+    cursor: url(https://cdn.jsdelivr.net/gh/Wadehl/web-data/mouse/light/pointer.cur),
+      default;
+    }
+    a,img {
+    cursor: url(https://cdn.jsdelivr.net/gh/Wadehl/web-data/mouse/light/link.cur),
+      default;
+    }*/
+
+    /* .card-widget.card-announcement {
+        background: url(https://cdn.jsdelivr.net/gh/rigodlee/BLOGCDN/img/20200530181856.gif) !important;
+    }
+
+    #aside-content .card-info .author-info__description{
+        background: url(https://cdn.jsdelivr.net/gh/rigodlee/BLOGCDN/img/H3342af90d24b4d62b9bbfec9688ccc25M.gif);
+    } */
+
+
+    /*颜色修改*/
+    /*#nav #site-name{
+        color:#FFC0BE  !important;
+    }*/
+/* 
+    .icon-outline-lovely:before{
+        color:red ;
+    }
+
+    .icon-jia:before{
+        color:darkorange;
+    }
+
+    .icon-vuesax-outline-archive:before{
+        color:lightseagreen;
+    }
+
+    .icon-child:before{
+        color:orangered;
+    }
+
+    .icon-outline-user-tag:before{
+        color:cornflowerblue;
+    }
+
+    .icon-dog:before{
+        color: #a9bfe3;
+    }
+
+    .icon-cat::before{
+        color:#ffc0be;
+    }
+
+    .icon-chat:before{
+        color:lightseagreen;
+    }
+
+    .icon-vuesax-outline-instagram:before{
+        color:orangered;
+    }
+
+    .icon-kebiao:before{
+        color:darkgoldenrod;
+    }
+
+    .icon-vuesax-outline-task-square:before{
+        color:cadetblue;
+    }
+
+    .icon-fenlei:before{
+        color:dodgerblue;
+    }
+
+    /*.fa-tags:before{
+        color:sandybrown;
+    }
+
+    .icon-tag::before{
+        color:sandybrown;
+    }
+
+    .icon-music:before{
+        color:red;
+    }
+
+    .icon-outline-lock-circle:before{
+        color:crimson;
+    }
+
+    #nav a{
+        color: #777 !important;
+    }*/
+    .fa-search:before{
+        color:lightskyblue !important;
+    } 
+
+    .fa-adjust:before{
+        color:#ffa516 !important;
+    }
+
+
+    div#runtime{
+        color: #535150 !important;
+        background-color: transparent !important;
+    }
+
+    .icon-pikachu:before{
+        font-size: xxx-large;
+    }
+
+
+    
+
+    /* #sidebar #sidebar-menus{
+        width: 73% !important;
+    } */
+
+    [data-theme='dark'] a{
+        color: #FFFFFFB3 !important;
+    }
+
+    [data-theme='dark'] #he-plugin-simple[data-v-41ba7e2c]{
+        color:#FFFFFFB3;
+    }
+
+    /*标题图标修改*/
+    #article-container.post-content h1:before, #article-container.post-content h4:before{
+        font-family: 'iconfont';
+        content: '\f233';
+    }
+
+    #article-container.post-content h2:before, #article-container.post-content h5:before{
+        font-family: 'iconfont';
+        content: '\e601'
+    }
+
+    #article-container.post-content h3:before, #article-container.post-content h6:before{
+        font-family: 'iconfont';
+        content: '\f234'
+    }
+    #card-widget>card-botui{
+        background: #d1e6fa ;
+    }
+    
+    @media screen and (max-width:776px){
+        div#crowd {
+            display: none;
+        }
+        div#footercopy {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width:780px){
+        div#footer-wrap{
+            display: none;
+        }
+    }
+
+
+

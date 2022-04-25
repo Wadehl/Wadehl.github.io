@@ -1,0 +1,30 @@
+body {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(230,246,253,1) 30%, rgba(159,219,228,1) 100%);
+}
+
+svg {
+  width: 96vw;
+  min-width: 300px;
+  max-width: 900px;
+  max-height: 96vh;
+  --color-stroke-1: #372920;
+  --color-stroke-2: #473743;
+  --color-stroke-3: #fff;
+  --color-highlight: #fff;
+  --color-main: #fcdc55;
+  --color-cheek: #e9041e;
+  --color-mouth: #88181a;
+  --color-tongue: #e77374;
+  --color-tail: #663c21;
+  --color-board: #c495b8;
+  --color-board-fin: #8c7988;
+}
+
+/* #surf{
+  transform: translateY(40px);
+} */

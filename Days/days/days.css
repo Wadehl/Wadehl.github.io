@@ -1,0 +1,46 @@
+.wrapper {
+    /*This part is important for centering*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hbe-button{
+    display: none !important;
+  }
+  
+  .typing-demo {
+    width: 25ch;
+    animation: typing 6s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: 'xiangsu';
+    font-size: 10px;
+  }
+
+  .typing-demo2{
+    width:50ch;
+    animation:typing 5s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: 'xiangsu';
+    font-size: 10px;
+  }
+
+  cnt{
+    font-size: 10px !important;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }

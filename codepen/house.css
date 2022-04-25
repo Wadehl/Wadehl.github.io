@@ -1,0 +1,754 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  ba {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 90vh;
+    background: #a2d8f3;
+  }
+  
+  .body {
+    position: relative;
+  }
+  
+  .roof .top {
+    width: calc(100% + 2 * calc(2 * 1vmin));
+    background: linear-gradient(#dd9980, #dd9980 50%, #af5842 50%);
+    height: calc(2 * 1vmin);
+    position: relative;
+    left: calc(-2 * 1vmin);
+  }
+  .roof .top:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 1vmin 0 0 1vmin;
+    border-color: transparent transparent transparent #a2d8f3;
+  }
+  .roof .top:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 1vmin 1vmin;
+    border-color: transparent transparent #a2d8f3 transparent;
+  }
+  .roof .middle {
+    width: calc(100% + calc(2 * 1vmin));
+    background-image: linear-gradient(
+      90deg,
+      #d8785b 25%,
+      #af5842 25%,
+      #af5842 50%,
+      #d8785b 50%,
+      #d8785b 75%,
+      #af5842 75%,
+      #af5842 100%
+    );
+    background-size: calc(6 * 1vmin) calc(6 * 1vmin);
+    height: calc(2 * 1vmin);
+    position: relative;
+    left: calc(-1 * 1vmin);
+  }
+  .roof .bottom {
+    width: 100%;
+    background: #af5842;
+    height: calc(4 * 1vmin);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 1vmin;
+  }
+  .roof .bottom span {
+    border: calc(0.75 * 1vmin) solid #86432f;
+    border-bottom: none;
+    width: calc(80% / 4);
+    height: 100%;
+    position: relative;
+  }
+  .roof .bottom span:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: #86432f;
+    height: calc(2 * 1vmin);
+    width: calc(4 * 1vmin);
+    border-top-right-radius: calc(2 * 1vmin);
+    border-top-left-radius: calc(2 * 1vmin);
+  }
+  
+  .chimney1 {
+    width: calc(3 * 1vmin);
+    height: calc(4 * 1vmin);
+    background: #d8785b;
+    position: absolute;
+    left: calc(6 * 1vmin);
+    top: calc(-4 * 1vmin);
+  }
+  .chimney1:before {
+    position: absolute;
+    top: 0;
+    content: "";
+    width: calc(100% + 1vmin);
+    left: calc(-0.5 * 1vmin);
+    height: 1vmin;
+    background: #dd9980;
+  }
+  
+  .chimney2 {
+    width: calc(6 * 1vmin);
+    height: calc(4 * 1vmin);
+    background: #d8785b;
+    position: absolute;
+    left: calc(12 * 1vmin);
+    top: calc(-4 * 1vmin);
+  }
+  .chimney2:before {
+    position: absolute;
+    top: 0;
+    content: "";
+    width: calc(100% + 1vmin);
+    left: calc(-0.5 * 1vmin);
+    height: 1vmin;
+    background: #dd9980;
+  }
+  
+  .antenna {
+    position: absolute;
+    right: calc(8 * 1vmin);
+    top: calc(-7 * 1vmin);
+    width: 1vmin;
+    height: calc(7 * 1vmin);
+    background: #889bad;
+  }
+  .antenna:before {
+    content: "";
+    position: absolute;
+    height: 1vmin;
+    width: calc(10 * 1vmin);
+    left: calc(-4.5 * 1vmin);
+    top: 1vmin;
+    background: #889bad;
+  }
+  .antenna span {
+    position: absolute;
+    width: 1vmin;
+    background: #889bad;
+  }
+  .antenna .ant1 {
+    height: calc(4 * 1vmin);
+    left: calc(-4.5 * 1vmin);
+    top: calc(-0.5 * 1vmin);
+  }
+  .antenna .ant2 {
+    height: calc(3 * 1vmin);
+    left: calc(-2 * 1vmin);
+  }
+  .antenna .ant3 {
+    height: calc(3 * 1vmin);
+    right: calc(-2 * 1vmin);
+  }
+  .antenna .ant4 {
+    height: calc(4 * 1vmin);
+    right: calc(-4.5 * 1vmin);
+    top: calc(-0.5 * 1vmin);
+  }
+  
+  .floor {
+    width: calc(2 * calc(20 * 1vmin));
+    height: calc(20 * 1vmin);
+    background: #d8785b;
+    border-top: #af5842 solid calc(2 * 1vmin);
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+  .floor:before {
+    content: "";
+    position: absolute;
+    top: calc(-2 * 1vmin);
+    left: -1vmin;
+    height: 1vmin;
+    width: calc(100% + 2 * 1vmin);
+    background: #dd9980;
+  }
+  
+  .window {
+    position: relative;
+    top: calc(4 * 1vmin);
+    width: calc(1vmin * 6);
+    height: calc(1vmin * 10);
+  }
+  .window:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 1vmin;
+    background: #573026;
+  }
+  
+  .windowFrame {
+    height: 100%;
+    width: 100%;
+    background: #62a1cb;
+    border: 1vmin solid #573026;
+  }
+  
+  .windowTop {
+    height: 1vmin;
+    width: calc(100% + 2 * 1vmin);
+    position: absolute;
+    left: -1vmin;
+    background: #dd9980;
+    z-index: 1;
+    top: -1vmin;
+  }
+  .windowTop:before {
+    content: "";
+    position: absolute;
+    top: calc(-2 * 1vmin);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 calc(4 * 1vmin) calc(2 * 1vmin) calc(4 * 1vmin);
+    border-color: transparent transparent #dd9980 transparent;
+  }
+  .windowTop:after {
+    content: "";
+    position: absolute;
+    top: calc(-1 * 1vmin);
+    left: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+    border-style: solid;
+    border-width: 0 1vmin 1vmin 1vmin;
+    border-color: transparent transparent #af5842 transparent;
+    opacity: 0.7;
+  }
+  
+  .windowBottom {
+    height: calc(2 * 1vmin);
+    width: calc(100% + 2 * 1vmin);
+    position: absolute;
+    left: -1vmin;
+    background: linear-gradient(#dd9980 0, #dd9980 50%, #86432f 50%);
+  }
+  
+  .window9 {
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .window1 .windowFrame {
+    background: linear-gradient(
+      90deg,
+      #fec864 1vmin,
+      #fec864 1vmin,
+      #aa803e 1vmin,
+      #aa803e calc(2 * 1vmin),
+      #fec864 calc(2 * 1vmin)
+    );
+  }
+  
+  .window2 .windowFrame,
+  .window4 .windowFrame,
+  .window7 .windowFrame {
+    background: linear-gradient(
+      -225deg,
+      #62a1cb,
+      #62a1cb 1vmin,
+      #82c7d0 1vmin,
+      #82c7d0 2vmin,
+      #62a1cb 2vmin,
+      #62a1cb 3vmin,
+      #82c7d0 3vmin,
+      #82c7d0 4vmin,
+      #62a1cb 4vmin
+    );
+  }
+  
+  .window3 .windowFrame {
+    background: linear-gradient(#62a1cb, #62a1cb 50%, #aa803e 50%);
+  }
+  
+  .window5 .windowFrame {
+    background: linear-gradient(
+      90deg,
+      #fec864,
+      #fec864 calc(2 * 1vmin),
+      #aa803e calc(2 * 1vmin)
+    );
+  }
+  
+  .window6 .windowFrame {
+    background: #fec864;
+  }
+  
+  .window8 .windowFrame {
+    background: linear-gradient(
+      -225deg,
+      #62a1cb,
+      #62a1cb 1vmin,
+      #82c7d0 1vmin,
+      #82c7d0 calc(2.5 * 1vmin),
+      #62a1cb calc(2.5 * 1vmin)
+    );
+  }
+  
+  .zeroLevel {
+    width: 100%;
+    height: calc(8 * 1vmin);
+    position: relative;
+    background: linear-gradient(
+      #7f6a4d,
+      #7f6a4d 1vmin,
+      #523127 1vmin,
+      #523127 calc(2 * 1vmin),
+      #7f6a4d calc(2 * 1vmin)
+    );
+  }
+  
+  .stairs {
+    height: calc(5 * 1vmin);
+    width: 33%;
+    background: #71372e;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(
+      0deg,
+      #523127 30%,
+      #7f6a4d 30%,
+      #7f6a4d 50%,
+      #523127 50%,
+      #523127 80%,
+      #7f6a4d 80%,
+      #7f6a4d 100%
+    );
+    background-size: calc(4 * 1vmin) calc(4 * 1vmin);
+  }
+  .stairs .wall {
+    position: absolute;
+    top: calc(-1 * 1vmin);
+    width: calc(3 * 1vmin);
+    height: calc(5 * 1vmin);
+    background: #86432f;
+    border: 1vmin solid #d8785b;
+  }
+  .stairs .wall:before {
+    content: "";
+    position: absolute;
+    bottom: calc(-2 * 1vmin);
+    left: calc(-1.5 * 1vmin);
+    height: calc(2 * 1vmin);
+    width: calc(4 * 1vmin);
+    background: #dd9980;
+  }
+  .stairs .wall:after {
+    content: "";
+    position: absolute;
+    top: calc(-2 * 1vmin);
+    left: calc(-1.5 * 1vmin);
+    height: calc(2 * 1vmin);
+    width: calc(4 * 1vmin);
+    background: #dd9980;
+  }
+  .stairs .wall1 {
+    left: calc(-0.5 * 1vmin);
+  }
+  .stairs .wall2 {
+    right: calc(-0.5 * 1vmin);
+  }
+  
+  .doorWrapper {
+    height: calc(calc(20 * 1vmin) - calc(2 * 1vmin));
+    width: 33%;
+    background: #71372e;
+    position: absolute;
+    bottom: calc(8 * 1vmin);
+    right: 0;
+    border: calc(2.5 * 1vmin) solid #7f6a4d;
+    border-top-width: calc(3 * 1vmin);
+    border-bottom: 0;
+    display: flex;
+  }
+  .doorWrapper:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1vmin;
+    background: #46221c;
+  }
+  .doorWrapper .topLight {
+    position: absolute;
+    width: 70%;
+    margin: 0 auto;
+    top: calc(1.5 * 1vmin);
+    left: 0;
+    right: 0;
+    background: linear-gradient(
+      90deg,
+      #fec864,
+      #fec864,
+      21%,
+      transparent 21%,
+      transparent 33.3%,
+      #aa803e 33.3%,
+      #aa803e 67%,
+      transparent 67%,
+      transparent 73%,
+      #fec864 81%,
+      #fec864 100%
+    );
+    height: 1vmin;
+  }
+  .doorWrapper .cornice {
+    position: absolute;
+    width: calc(4 * 1vmin);
+    height: 1vmin;
+    background: #9f8560;
+  }
+  .doorWrapper .cornice:before {
+    content: "";
+    position: absolute;
+    top: calc(1 * 1vmin);
+    border-top: 1vmin solid #5f503a;
+    border-left: 1vmin solid transparent;
+    border-right: 1vmin solid transparent;
+    height: 0;
+    width: calc(2 * 1vmin);
+  }
+  .doorWrapper .cornice1 {
+    left: calc(-3 * 1vmin);
+  }
+  .doorWrapper .cornice2 {
+    right: calc(-3 * 1vmin);
+  }
+  .doorWrapper .handrail {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+  .doorWrapper .handrail .right {
+    height: calc(6 * 1vmin);
+    width: 1vmin;
+    background: #523127;
+    display: block;
+    position: absolute;
+    right: calc(-1.75 * 1vmin);
+    bottom: 0;
+  }
+  .doorWrapper .handrail .right:before {
+    content: "";
+    width: calc(1.5 * 1vmin);
+    height: calc(1.5 * 1vmin);
+    border-radius: 100%;
+    background: #523127;
+    position: absolute;
+    right: calc(-0.25 * 1vmin);
+  }
+  .doorWrapper .handrail .left {
+    height: calc(6 * 1vmin);
+    width: 1vmin;
+    background: #523127;
+    display: block;
+    position: absolute;
+    left: calc(-1.75 * 1vmin);
+    bottom: 0;
+  }
+  .doorWrapper .handrail .left:before {
+    content: "";
+    width: calc(1.5 * 1vmin);
+    height: calc(1.5 * 1vmin);
+    border-radius: 100%;
+    background: #523127;
+    position: absolute;
+    top: 0;
+    left: calc(-0.25 * 1vmin);
+  }
+  .doorWrapper .door {
+    width: 70%;
+    margin: auto auto 0 auto;
+    height: 80%;
+    background: #71372e;
+    border: calc(2 * 1vmin) solid #523127;
+    border-bottom-width: calc(2 * 1vmin);
+    border-top-width: calc(2 * 1vmin);
+    position: relative;
+  }
+  .doorWrapper .door:before {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: #523127;
+    width: 1vmin;
+    height: 1vmin;
+    border-radius: 50%;
+  }
+  
+  .balcony {
+    position: absolute;
+    bottom: calc(-1 * 1vmin);
+    left: calc(-9 * 1vmin);
+    width: calc(9 * 1vmin);
+    height: 1vmin;
+    background: #af5842;
+  }
+  .balcony .grid {
+    position: absolute;
+    left: 0;
+    bottom: calc(2 * 1vmin);
+    width: calc(9 * 1vmin);
+    height: calc(7 * 1vmin);
+    background-image: linear-gradient(
+      90deg,
+      #484551 16.67%,
+      #a2d8f3 16.67%,
+      #a2d8f3 50%,
+      #484551 50%,
+      #484551 66.67%,
+      #a2d8f3 66.67%,
+      #a2d8f3 100%
+    );
+    background-size: calc(6 * calc(0.5 * 1vmin));
+  }
+  .balcony .grid span {
+    width: calc(0.5 * 1vmin);
+    height: calc(1 * 1vmin);
+    display: block;
+    background: #484551;
+    position: absolute;
+    bottom: calc(-1 * 1vmin);
+  }
+  .balcony .grid:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(9 * 1vmin);
+    height: calc(0.5 * 1vmin);
+    background: #484551;
+  }
+  .balcony .grid:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: calc(9 * 1vmin);
+    height: calc(0.5 * 1vmin);
+    background: #484551;
+  }
+  .balcony .flower {
+    width: calc(2 * 1vmin);
+    height: 1vmin;
+    background: #7f6a4d;
+    position: absolute;
+    top: calc(-9 * 1vmin);
+  }
+  .balcony .flower:before {
+    content: "";
+    width: calc(3 * 1vmin);
+    height: calc(3 * 1vmin);
+    transform: rotate(-45deg);
+    position: absolute;
+    top: calc(-4.5 * 1vmin);
+    right: calc(-0.5 * 1vmin);
+    background: #98b854;
+  }
+  
+  .ladder {
+    width: calc(4 * 1vmin);
+    height: calc(1.7 * calc(20 * 1vmin));
+    position: absolute;
+    left: calc(-4 * 1vmin);
+    bottom: 13vmin;
+    background-image: linear-gradient(
+      0deg,
+      #484551 16.67%,
+      #a2d8f3 16.67%,
+      #a2d8f3 50%,
+      #484551 50%,
+      #484551 66.67%,
+      #a2d8f3 66.67%,
+      #a2d8f3 100%
+    );
+    background-size: calc(10 * calc(0.5 * 1vmin)) calc(10 * calc(0.5 * 1vmin));
+    z-index: -1;
+  }
+  .ladder:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #484551;
+    height: 105%;
+    width: calc(0.5 * 1vmin);
+  }
+  
+  .tree {
+    position: absolute;
+    width: calc(6 * 1vmin);
+    height: calc(8 * 1vmin);
+    background: linear-gradient(90deg, #98b854, #98b854 50%, #76812f 50%);
+  }
+  .tree:before {
+    content: "";
+    position: absolute;
+    width: calc(4 * 1vmin);
+    height: calc(2 * 1vmin);
+    background: #76812f;
+    left: calc(1 * 1vmin);
+    top: calc(-2 * 1vmin);
+  }
+  .tree:after {
+    content: "";
+    position: absolute;
+    width: calc(4 * 1vmin);
+    height: calc(2 * 1vmin);
+    background: #5c7523;
+    left: calc(1 * 1vmin);
+    bottom: calc(-2 * 1vmin);
+  }
+  .tree .trunk {
+    width: 1vmin;
+    height: calc(4 * 1vmin);
+    background: #fff;
+    position: absolute;
+    bottom: calc(-6 * 1vmin);
+    left: calc(2.5 * 1vmin);
+  }
+  .tree .pot {
+    width: calc(4 * 1vmin);
+    height: 1vmin;
+    background: #98b854;
+    position: absolute;
+    bottom: calc(-6.5 * 1vmin);
+    left: calc(1 * 1vmin);
+  }
+  .tree .pot:before {
+    content: "";
+    position: absolute;
+    height: calc(2 * 1vmin);
+    width: calc(5 * 1vmin);
+    background: #484551;
+    bottom: calc(-2 * 1vmin);
+    left: calc(-0.5 * 1vmin);
+  }
+  
+  .tree1 {
+    top: calc(-8.5 * 1vmin);
+    right: calc(-7 * 1vmin);
+  }
+  
+  .tree2 {
+    top: calc(-8.5 * 1vmin);
+    right: calc(14 * 1vmin);
+  }
+  
+  .hydrant {
+    position: absolute;
+    left: calc(-7 * 1vmin);
+    bottom: calc(0.5 * 1vmin);
+    width: calc(3 * 1vmin);
+    height: calc(4 * 1vmin);
+    background: #ca3133;
+    border: 1vmin solid #d65859;
+  }
+  .hydrant:before {
+    content: "";
+    position: absolute;
+    bottom: calc(-1.5 * 1vmin);
+    left: calc(-1.5 * 1vmin);
+    width: calc(4 * 1vmin);
+    height: calc(0.5 * 1vmin);
+    background: #d65859;
+  }
+  .hydrant:after {
+    content: "";
+    position: absolute;
+    top: calc(-1.5 * 1vmin);
+    left: calc(-1.5 * 1vmin);
+    width: calc(4 * 1vmin);
+    height: 1vmin;
+    background: #d65859;
+  }
+  .hydrant span {
+    position: absolute;
+    top: calc(-2.5 * 1vmin);
+    left: calc(-0.5 * 1vmin);
+    width: calc(2 * 1vmin);
+    height: calc(2 * 1vmin);
+    border-radius: 50%;
+    background: #ca3133;
+  }
+  .hydrant span:before {
+    content: "";
+    position: absolute;
+    width: calc(0.5 * 1vmin);
+    height: calc(0.5 * 1vmin);
+    background: #d65859;
+    right: calc(0.8 * 1vmin);
+    top: calc(-0.5 * 1vmin);
+  }
+  
+  .fence {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: calc(-2 * 1vmin);
+  }
+  
+  .fenceSpan {
+    width: calc(5.5 * 1vmin);
+    height: calc(4 * 1vmin);
+    border: calc(0.5 * 1vmin) solid #523127;
+    border-bottom: none;
+    position: relative;
+  }
+  .fenceSpan:before {
+    content: "";
+    position: absolute;
+    width: calc(5.5 * 1vmin);
+    left: calc(-0.5 * 1vmin);
+    top: calc(2 * 1vmin);
+    height: calc(0.5 * 1vmin);
+    background: #523127;
+  }
+  .fenceSpan:after {
+    content: "";
+    position: absolute;
+    width: calc(0.5 * 1vmin);
+    left: calc(2 * 1vmin);
+    top: calc(-0.5 * 1vmin);
+    height: calc(3 * 1vmin);
+    background: #523127;
+  }
+  
+  .ground {
+    width: 100%;
+    height: calc(8 * 1vmin);
+    background: linear-gradient(#938fa0, #938fa0 2vmin, #484551 2vmin);
+  }

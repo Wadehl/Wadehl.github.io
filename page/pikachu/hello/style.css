@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  height: 50px;
+  text-align: center;
+  width: 200px;
+}
+
+#heading {
+  font-family: "HarmonyOS_Regular",Indie Flower, cursive;
+  font-size: 5vw;
+  letter-spacing: 0.5vw;
+}
+
+h2 {
+  margin-top: 6vw;
+  font-size: 5vw;
+  font-family: "HarmonyOS_Regular",'Covered By Your Grace', cursive;
+}
+h3 {
+    font-family: "HarmonyOS_Regular",Indie Flower, cursive;
+    font-size: 5vw;
+    padding: 0;
+    opacity: 0;
+    transition-duration: 1s;
+    display: inline-block;
+}
+#pikachu {
+  height: 20vw;
+  vertical-align: middle;
+  transition-duration: 1s;
+  animation: shake 1s infinite alternate;
+  animation-play-state: paused; 
+  cursor: pointer;
+}
+
+#pikachu:hover {
+    animation-play-state: running;
+    -webkit-filter: drop-shadow(1vw 1vw 5px gray);
+    filter: drop-shadow(1vw 1vw 5px gray);
+}
+
+#pikachu:hover + h3 {
+  opacity: 1;
+}
+
+@keyframes shake {
+  0% {transform: rotateZ(2deg) scale(0.9)}
+  25% {transform: rotateZ(-2deg) rotateY(10deg);}
+  50% {transform: rotateZ(5deg) scale(1.1)}
+  75% {transform: rotateZ(-5deg) rotateY(-10deg);}
+}
