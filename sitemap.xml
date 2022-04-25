@@ -298,6 +298,13 @@
   </url>
   
   <url>
+    <loc>http://dayswithvenki.top/tags/%E5%83%8F%E7%B4%A0%E7%94%BB/</loc>
+    <lastmod>2022-04-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://dayswithvenki.top/tags/MarkDown/</loc>
     <lastmod>2022-04-25</lastmod>
     <changefreq>daily</changefreq>
@@ -306,13 +313,6 @@
   
   <url>
     <loc>http://dayswithvenki.top/tags/LaTeX/</loc>
-    <lastmod>2022-04-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://dayswithvenki.top/tags/%E5%83%8F%E7%B4%A0%E7%94%BB/</loc>
     <lastmod>2022-04-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -349,14 +349,14 @@
   </url>
   
   <url>
-    <loc>http://dayswithvenki.top/categories/MarkDown/</loc>
+    <loc>http://dayswithvenki.top/categories/%E6%8F%92%E7%94%BB/</loc>
     <lastmod>2022-04-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://dayswithvenki.top/categories/%E6%8F%92%E7%94%BB/</loc>
+    <loc>http://dayswithvenki.top/categories/MarkDown/</loc>
     <lastmod>2022-04-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
