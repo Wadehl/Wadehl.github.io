@@ -6,7 +6,7 @@
   <link href="http://dayswithvenki.top/atom.xml" rel="self"/>
   
   <link href="http://dayswithvenki.top/"/>
-  <updated>2022-04-17T11:24:56.256Z</updated>
+  <updated>2022-04-29T16:15:31.851Z</updated>
   <id>http://dayswithvenki.top/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>计算机网络1</title>
+    <link href="http://dayswithvenki.top/posts/net1.html"/>
+    <id>http://dayswithvenki.top/posts/net1.html</id>
+    <published>2022-04-25T08:50:23.606Z</published>
+    <updated>2022-04-29T16:15:31.851Z</updated>
+    
+    <content type="html"><![CDATA[<h2 align="center" id="公式">    公式:</h2><script type="math/tex; mode=display">奈氏准则: 码元传输的最高速率 = 2W (码元/s)</script><script type="math/tex; mode=display">信噪比(dB) = 10\log_{10}{S/N} (dB)</script><script type="math/tex; mode=display">香农公式: C = W\log_2{(1+S/N)} (bit/s)</script><div class="note info simple"><div align="center">    W为信道宽度,S为信道内所传信号的平均功率,N为信道内部高斯噪声功率.<br></div></div><h3 id="意义">意义:</h3><div align="center">    奈氏准则:激励不断探索先进的编码技术,是每一个码元携带更多比特的信息.<br>    香农公式:告诫不可能突破信息传输速率的绝对极限.</div><hr><h2 align="center" id="cdma工作原理">CDMA工作原理:</h2><p>&nbsp;&nbsp;1.将每一个比特时间划分为m个短的间隔,称为码片.</p><p>&nbsp;&nbsp;2.为每个站指派一个唯一的m bit码片序列.</p><p>​    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)发送比特1: 发送自己的m位码片序列.</p><p>​    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)发送比特0: 发送该码片序列的二进制反码.</p><div class="note info simple"><p>eg: S的8 bit 码片序列为 00011011.</p><p>1 -&gt; 00011011</p><p>0 -&gt; 11100100</p><p>码片序列: (-1 -1 -1 +1 +1 -1 +1 +1)</p></div><p>每个站分配的码片序列：各不相同，且必须互相正交。<br></p><p><font color="red">正交：</font>向量 S和T的规格化内积 等于0 。</p><p><img src="https://gitee.com/Wadehl/my_pic_bed/raw/master/net.png" alt></p><p>任何一个码片向量和该码片向量自己的规格化内积都是1 。</p><p>一个码片向量和该码片反码的向量的规格化内积值是-1。</p>]]></content>
+    
+    
+    <summary type="html">计算机网络 第二章笔记</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>小郭的原神像素插画</title>
