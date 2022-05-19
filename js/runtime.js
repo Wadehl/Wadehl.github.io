@@ -27,21 +27,21 @@ setInterval(() => {
     time[4] = nol(second);
   }
   if ((Number(time[2])<12) && (Number(time[2])>=7)){
-    currentTimeHtml ="<img src='https://cdn.jsdelivr.net/gh/Wadehl/web-data/MyBlogdata/img/goodmorning.png' height='130px' weight='200px'></img>"/*+"<div id='runtime'>" + time[0] + ' YEAR ' + time[1] + ' DAYS ' + time[2] + ' : ' + time[3] + ' : ' + time[4] + '</div>';*/
+    currentTimeHtml ="<img src='https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/img/goodmorning.png' height='130px' weight='200px'></img>"/*+"<div id='runtime'>" + time[0] + ' YEAR ' + time[1] + ' DAYS ' + time[2] + ' : ' + time[3] + ' : ' + time[4] + '</div>';*/
   }
   else if((Number(time[2])<14) && (Number(time[2])>=12))
   {
-    currentTimeHtml = "<img src='https://cdn.jsdelivr.net/gh/Wadehl/web-data/MyBlogdata/img/goodnoon.png' height='130px' weight='200px'></img>"
+    currentTimeHtml = "<img src='https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/img/goodnoon.png' height='130px' weight='200px'></img>"
   }
   else if((Number(time[2])<18) && (Number(time[2])>=14))
   {
-    currentTimeHtml = "<img src='https://cdn.jsdelivr.net/gh/Wadehl/web-data/MyBlogdata/img/goodafternoon.png' height='130px' weight='200px'></img>"
+    currentTimeHtml = "<img src='https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/img/goodafternoon.png' height='130px' weight='200px'></img>"
   }
   else if ((Number(time[2])>=18) && (Number(time[2])<23)){
-    currentTimeHtml ="<img src='https://cdn.jsdelivr.net/gh/Wadehl/web-data/MyBlogdata/img/goodnight.png' height='130px' weight='200px'></img>" /*+ time[0] + ' YEAR ' + time[1] + ' DAYS ' + time[2] + ' : ' + time[3] + ' : ' + time[4] + '</div>';*/
+    currentTimeHtml ="<img src='https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/img/goodnight.png' height='130px' weight='200px'></img>" /*+ time[0] + ' YEAR ' + time[1] + ' DAYS ' + time[2] + ' : ' + time[3] + ' : ' + time[4] + '</div>';*/
   }
   else if((Number(time[2]>=23))||((Number(time[2])>=0)&&(Number(time[2]<7)))){
-    currentTimeHtml ="<img src='https://cdn.jsdelivr.net/gh/Wadehl/web-data/MyBlogdata/img/goodsleeping.png' height='130px' weight='200px'></img>"
+    currentTimeHtml ="<img src='https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/img/goodsleeping.png' height='130px' weight='200px'></img>"
   }
   document.getElementById("workboard").innerHTML = currentTimeHtml;
 }, 1000);

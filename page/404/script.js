@@ -154,7 +154,7 @@ class App extends React.Component {
       React.createElement("c", null, "点击右下角按钮或者回退来退出这个页面吧！\n"), /*#__PURE__*/
       React.createElement("p", null, "\n"), /*#__PURE__*/
       React.createElement("p", null, "\n"), /*#__PURE__*/
-      //React.createElement("img",{src:"https://cdn.jsdelivr.net/gh/Wadehl/web-data/MyBlogdata/background/bg-404.png",className:"myimg",},),
+      //React.createElement("img",{src:"https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/background/bg-404.png",className:"myimg",},),
 
 
       // React.createElement("button", {
