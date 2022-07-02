@@ -82,6 +82,7 @@
 
 /* hbe button in post page */
 .hbe-button {
+  display: none !important;
   width: 130px;
   height: 40px;
   background: linear-gradient(to right, #A9BFE3 0%,#FFC0BE 60%); /* W3C */
