@@ -53,16 +53,16 @@
   </entry>
   
   <entry>
-    <title>小郭的原神像素插画</title>
+    <title>像素插画2</title>
     <link href="http://dayswithvenki.top/posts/genshin.html"/>
     <id>http://dayswithvenki.top/posts/genshin.html</id>
     <published>2022-04-17T11:16:29.252Z</published>
-    <updated>2022-04-17T11:24:56.256Z</updated>
+    <updated>2022-07-02T07:23:27.519Z</updated>
     
-    <content type="html"><![CDATA[<h1 align="center" id="小郭的原神像素插画">    <font color="#A9BFE3">小郭的原神像素插画</font></h1>  <p><img src="https://s2.loli.net/2022/04/17/jmTBSL2lNfXnGAs.png" alt="image.png"></p><h2 id="胡桃">    胡桃:</h2><p><img src="https://s2.loli.net/2022/04/17/OlMTq5i9xoN4W6B.png" alt="pixil-frame-0 _62_.png"></p><h2 id="甘雨">    甘雨:</h2><p><img src="https://s2.loli.net/2022/04/17/fLUZzdxYl95bFvW.png" alt="pixil-frame-0 _69_.png"></p><h2 id="魈">    魈:</h2><p><img src="https://s2.loli.net/2022/04/17/5TuRrHKWC7xISBv.png" alt="pixil-frame-0 _75_.png"></p><h2 id="宵宫">    宵宫:</h2><p><img src="https://s2.loli.net/2022/04/17/MbgN8zFRr6pe2Bk.png" alt="pixil-frame-0 _71_.png"></p><h2 id="神里">    神里:</h2><p><img src="https://s2.loli.net/2022/04/17/7STxAz6sHEvi3DR.png" alt="pixil-frame-0 _76_.png"></p><h2 id="万叶">    万叶:</h2><p><img src="https://s2.loli.net/2022/04/17/yrD3hMNd8ZzQjC6.png" alt="pixil-frame-0 _73_.png"></p>]]></content>
+    <content type="html"><![CDATA[<h1 align="center" id="像素插画2">    <font color="#A9BFE3">像素插画2</font></h1>  <p><img src="https://s2.loli.net/2022/04/17/jmTBSL2lNfXnGAs.png" alt="image.png"></p><h2 id="胡桃">    胡桃:</h2><p><img src="https://s2.loli.net/2022/04/17/OlMTq5i9xoN4W6B.png" alt="pixil-frame-0 _62_.png"></p><h2 id="甘雨">    甘雨:</h2><p><img src="https://s2.loli.net/2022/04/17/fLUZzdxYl95bFvW.png" alt="pixil-frame-0 _69_.png"></p><h2 id="魈">    魈:</h2><p><img src="https://s2.loli.net/2022/04/17/5TuRrHKWC7xISBv.png" alt="pixil-frame-0 _75_.png"></p><h2 id="宵宫">    宵宫:</h2><p><img src="https://s2.loli.net/2022/04/17/MbgN8zFRr6pe2Bk.png" alt="pixil-frame-0 _71_.png"></p><h2 id="神里">    神里:</h2><p><img src="https://s2.loli.net/2022/04/17/7STxAz6sHEvi3DR.png" alt="pixil-frame-0 _76_.png"></p><h2 id="万叶">    万叶:</h2><p><img src="https://s2.loli.net/2022/04/17/yrD3hMNd8ZzQjC6.png" alt="pixil-frame-0 _73_.png"></p>]]></content>
     
     
-    <summary type="html">小郭的像素插画</summary>
+    <summary type="html">Genshin Impact</summary>
     
     
     
@@ -158,7 +158,7 @@
     <link href="http://dayswithvenki.top/posts/algorithm2.html"/>
     <id>http://dayswithvenki.top/posts/algorithm2.html</id>
     <published>2022-03-25T02:43:40.000Z</published>
-    <updated>2022-07-02T06:29:25.761Z</updated>
+    <updated>2022-07-02T07:27:40.160Z</updated>
     
     <content type="html"><![CDATA[<p></p><h1 align="center" id="1时间复杂性">    1.时间复杂性</h1><br><div class="note success simple"><font color="green">最优算法: 时间复杂性O(n log n),空间复杂性O(1)</font></div><p></p><h2 id="1o符号上界">    <font color="#a9bfe3">1)$O$符号(上界)</font></h2><p>  令f(n)和g(n)是从自然数集到非负实数集的两个函数，若存在一个自然数<script type="math/tex">n_{0}</script>和一个常数c&gt;0，使得:</p><script type="math/tex; mode=display">{\forall}n\geq n_{0},f(n)\leq cg(n)</script><p>则f(n)为$O$(g(n))。</p><p>  若&nbsp;&nbsp;<script type="math/tex">\lim_{n\to \infty}\frac{f(n)}{g(n)}</script>  存在</p><p>那么:</p><script type="math/tex; mode=display">\lim_{n\to\infty}\frac{f(n)}{g(n)}\neq \infty 则: f(n)=O(g(n))</script><p><br></p><p><br></p><h2 id="2omega符号下界">    <font color="#a9bfe3">2)$\Omega$符号(下界)</font></h2><p>  令f(n)和g(n)是从自然数集到非负实数集的两个函数，若存在一个自然数<script type="math/tex">n_{0}</script>和一个常数c&gt;0，使得:</p><script type="math/tex; mode=display">{\forall}n\geq n_{0},f(n)\geq cg(n)</script><p>则f(n)为$\Omega$(g(n))。</p><p>  若&nbsp;&nbsp;<script type="math/tex">\lim_{n\to \infty}\frac{f(n)}{g(n)}</script>  存在</p><p>那么:</p><script type="math/tex; mode=display">\lim_{n\to\infty}\frac{f(n)}{g(n)}\neq0则 f(n)=Ω(g(n))</script><p><br></p><p><br></p><h2 id="3theta符号">    <font color="#a9bfe3">3)$\Theta$符号</font></h2><p>  令f(n)和g(n)是从自然数集到非负实数集的两个函数，若存在一个自然数$n_{0}$和常数$c_1,c_2$使得:</p><script type="math/tex; mode=display">{\forall}n\geq n_{0}, c_1g(n)\leq f(n) \leq c_2g(n)</script><p>则f(n)为$\Theta$(g(n))。</p><p>  若&nbsp;&nbsp;<script type="math/tex">\lim_{n\to \infty}\frac{f(n)}{g(n)}</script>  存在</p><p>那么:</p><script type="math/tex; mode=display">\lim_{n\to\infty}\frac{f(n)}{g(n)}=c则 f(n)=\Theta(g(n))\quad\quad(其中c\geq 0)</script><div class="note info simple"><p>Summary: 可以认为$O$类似于 $\leq$, $\Omega$类似于$\geq$,$\Theta$类似于=</p></div> <h2 id="举例">    <font color="#a9bfe3">举例:</font></h2><h3 align="center" id="fnlogn2"><font color="#ffa516">$f(n)=\log{n^2}$</font></h3>$$\because \lim_{n\to\infty}\frac{\log{n^2}}{n}=\lim_{n\to\infty}\frac{2\log{n}}{n}=\frac{2}{\ln{2}}\lim_{n\to\infty}\frac{1}{n}=0 \\\\$$$$\therefore f(n)=O(n)\quad but \quad not \quad \Omega(n) or \Theta(n)$$$$\because \log{n^2}=2\log{n} \therefore\log{n^2}=\Theta(\log{n}) \\\\    \therefore \log{n^k}=\Theta(n)\\$$<br><h3 align="center" id="sum_j1nlogj"><font color="#ffa516">$ \sum_{j=1}^{n}\log{j}$</font></h3><br>$$\because \sum_{j=1}^{n}\log{j} \leq \sum_{j=1}^{n}\log{n}$$$$\therefore \sum_{j=1}^{n}\log{j} = O(n\log{n}) $$$$又  \because \sum_{j=1}^{n}\log{j} \geq \sum_{j=1}^{\frac{n}2}\log{\frac{n}2}=\frac{n}{2}\log{\frac{n}2}=\frac{n}{2}\log{n} -\frac{n}{2}$$$$\therefore \sum_{j=1}^{n} = \Omega(n\log{n})$$$$\therefore \sum_{j=1}^{n} = \Theta(n\log{n})$$<br><h3 align="center" id="logn"><font color="#ffa516">$\log{n!}$</font></h3><br>$$\because \log{n!}=\log({n*(n-1)*\dots*1})=\log n *\log(n-1) *\dots*\log 1=\sum_{j=1}^{n}\log j$$$$\therefore \log n! = \Theta (n\log n)$$<h2 id="3o符号">    <font color="#a9bfe3">3)$o$符号</font></h2><script type="math/tex; mode=display">f(n)=o(g(n))当且仅当f(n)=O(g(n)),g(n)\neq O(g(n))</script><div class="note info simple"><p>用f(n)$\prec$g(n)表示f(n)是o(g(n))的：</p></div><script type="math/tex; mode=display">1 \prec \log \log n \prec \log n\prec \sqrt n \prec n^{\frac3 4}\prec n\prec n\log n \prec n^2 \prec n! \prec2^{n^2}</script>]]></content>
     
@@ -282,7 +282,7 @@
     <link href="http://dayswithvenki.top/posts/17ff13214.html"/>
     <id>http://dayswithvenki.top/posts/17ff13214.html</id>
     <published>2022-03-10T16:12:03.948Z</published>
-    <updated>2022-05-19T02:14:00.951Z</updated>
+    <updated>2022-07-02T07:26:45.444Z</updated>
     
     <content type="html"><![CDATA[<p></p><h1 align="center" id="小郭的像素插画">    <font color="#A9BFE3">小郭的像素插画</font></h1><p></p><font size="15px">See more in Pixilart of Kevin</font><p><i class="iconfont icon-016-painter"><font size="5px"><a href="https://www.pixilart.com/kevin-venki">https://www.pixilart.com/kevin-venki</a></font></i>    </p><h2 id="future">    future:</h2><p><img src="https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/img/us.png" alt="us"></p><p><img src="https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/background/bg0322.png"></p><h2 id="kevin">    Kevin:</h2><p><img src="https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/img/Kevin.jpg" style="zoom:50%;"></p><h2 id="venki">    Venki:</h2><p><img src="https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/img/Venki.jpg" style="zoom:33%;"></p><h2 id="chaichai">    chaichai:</h2><p><img src="https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/img/DOG.png" style="zoom:33%;"></p><h2 id="mimao">    mimao:</h2><p><img src="https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/img/CAT.jpg" style="zoom:33%;"></p>]]></content>
     

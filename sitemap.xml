@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://dayswithvenki.top/posts/algorithm2.html</loc>
+    
+    <lastmod>2022-07-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://dayswithvenki.top/posts/17ff13214.html</loc>
+    
+    <lastmod>2022-07-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://dayswithvenki.top/posts/genshin.html</loc>
+    
+    <lastmod>2022-07-02</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://dayswithvenki.top/posts/33f59116.html</loc>
     
     <lastmod>2022-07-02</lastmod>
@@ -72,23 +93,9 @@
   </url>
   
   <url>
-    <loc>http://dayswithvenki.top/posts/algorithm2.html</loc>
-    
-    <lastmod>2022-07-02</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://dayswithvenki.top/posts/algorithm1.html</loc>
     
     <lastmod>2022-07-02</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://dayswithvenki.top/posts/weeks2.html</loc>
-    
-    <lastmod>2022-05-19</lastmod>
     
   </url>
   
@@ -100,7 +107,7 @@
   </url>
   
   <url>
-    <loc>http://dayswithvenki.top/posts/17ff13214.html</loc>
+    <loc>http://dayswithvenki.top/posts/weeks2.html</loc>
     
     <lastmod>2022-05-19</lastmod>
     
@@ -187,13 +194,6 @@
     <loc>http://dayswithvenki.top/posts/weeks3.html</loc>
     
     <lastmod>2022-04-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://dayswithvenki.top/posts/genshin.html</loc>
-    
-    <lastmod>2022-04-17</lastmod>
     
   </url>
   
@@ -312,13 +312,6 @@
   </url>
   
   <url>
-    <loc>http://dayswithvenki.top/tags/%E5%83%8F%E7%B4%A0%E7%94%BB/</loc>
-    <lastmod>2022-07-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://dayswithvenki.top/tags/MarkDown/</loc>
     <lastmod>2022-07-02</lastmod>
     <changefreq>daily</changefreq>
@@ -327,6 +320,13 @@
   
   <url>
     <loc>http://dayswithvenki.top/tags/LaTeX/</loc>
+    <lastmod>2022-07-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://dayswithvenki.top/tags/%E5%83%8F%E7%B4%A0%E7%94%BB/</loc>
     <lastmod>2022-07-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -363,14 +363,14 @@
   </url>
   
   <url>
-    <loc>http://dayswithvenki.top/categories/%E6%8F%92%E7%94%BB/</loc>
+    <loc>http://dayswithvenki.top/categories/MarkDown/</loc>
     <lastmod>2022-07-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://dayswithvenki.top/categories/MarkDown/</loc>
+    <loc>http://dayswithvenki.top/categories/%E6%8F%92%E7%94%BB/</loc>
     <lastmod>2022-07-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

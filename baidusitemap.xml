@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://dayswithvenki.top/posts/algorithm2.html</loc>
+    <lastmod>2022-07-02</lastmod>
+  </url>
+  <url>
+    <loc>http://dayswithvenki.top/posts/17ff13214.html</loc>
+    <lastmod>2022-07-02</lastmod>
+  </url>
+  <url>
+    <loc>http://dayswithvenki.top/posts/genshin.html</loc>
+    <lastmod>2022-07-02</lastmod>
+  </url>
+  <url>
     <loc>http://dayswithvenki.top/posts/33f59116.html</loc>
     <lastmod>2022-07-02</lastmod>
   </url>
@@ -41,23 +53,15 @@
     <lastmod>2022-07-02</lastmod>
   </url>
   <url>
-    <loc>http://dayswithvenki.top/posts/algorithm2.html</loc>
-    <lastmod>2022-07-02</lastmod>
-  </url>
-  <url>
     <loc>http://dayswithvenki.top/posts/algorithm1.html</loc>
     <lastmod>2022-07-02</lastmod>
-  </url>
-  <url>
-    <loc>http://dayswithvenki.top/posts/weeks2.html</loc>
-    <lastmod>2022-05-19</lastmod>
   </url>
   <url>
     <loc>http://dayswithvenki.top/posts/weeks1.html</loc>
     <lastmod>2022-05-19</lastmod>
   </url>
   <url>
-    <loc>http://dayswithvenki.top/posts/17ff13214.html</loc>
+    <loc>http://dayswithvenki.top/posts/weeks2.html</loc>
     <lastmod>2022-05-19</lastmod>
   </url>
   <url>
@@ -79,9 +83,5 @@
   <url>
     <loc>http://dayswithvenki.top/posts/weeks3.html</loc>
     <lastmod>2022-04-30</lastmod>
-  </url>
-  <url>
-    <loc>http://dayswithvenki.top/posts/genshin.html</loc>
-    <lastmod>2022-04-17</lastmod>
   </url>
 </urlset> 
