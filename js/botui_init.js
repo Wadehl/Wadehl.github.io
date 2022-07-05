@@ -11,7 +11,7 @@ function botui_init() {
         .then(function() {
           botui.message.add({
             delay: 1100,
-            content: "是一个大二的计算机学生。"
+            content: "是一个大三的计算机学生。"
             }).then(function() {
           botui.action.button({
             delay: 1600,
@@ -40,7 +40,7 @@ function botui_init() {
       end = function() {
         botui.message.add({
           delay: 600,
-          content: "okok,拜拜咯"
+          content: "okok,拜拜咯 :("
         })
       },
       secondpart = function() {
@@ -54,14 +54,14 @@ function botui_init() {
           }).then(function() {
             botui.message.add({
               delay: 5000,
-              content: "除了分类的图是在外网上看到画风很可爱的图外，其他的像素画基本上都是参照网上的材料自己一点点模仿在pixilart上画出来的。"
+              content: "除了分类的图是在dribble上看到画风很可爱的图外，其他的像素画基本上都是参照网上的材料自己一点点模仿在pixilart上画出来的。"
             }).then(function() {
               botui.message.add({
-                delay: 8000,
+                delay: 3000,
                 content: "分类中有许许多多的东西--"
               }).then(function() {
                 botui.message.add({
-                  delay: 5000,
+                  delay: 2000,
                   content: "三角函数是给小吴一个考研的资料参考而整理编写出来的。"
                 }).then(function() {
                   botui.message.add({
@@ -103,11 +103,11 @@ function botui_init() {
       fourthpart = function() {
         botui.message.add({
           delay: 3000,
-          content: "'K','E','V','I','N' "
+          content: "'K','E','V','I','N' ----> 'V','E','N','K','I'"
         }).then(function() {
           botui.message.add({
             delay: 3000,
-            content: ",这几个英文字母都是和我女朋友英文名一模一样的哦!Days With Venki,Venki就是我的小吴的英文名啦~"
+            content: "这几个英文字母都是和我女朋友英文名一模一样的哦!Days With Venki,Venki就是我的小吴的英文名啦~"
           }).then(function() {
             botui.action.button({
               delay: 1500,
@@ -124,7 +124,7 @@ function botui_init() {
       fifthpart = function() {
         botui.message.add({
           delay: 5000,
-          content: "不知道你觉得这个网站的风格怎么样呢?我会继续好好搭建这个网站的哦，我会把像素画慢慢学好，把前端知识也好好学好，然后大学的专业方向估计是人工智能啦，希望能把想做的事情都做的好好的，希望Kevin和Venki能够一直好好的！"
+          content: "不知道你觉得这个网站的风格怎么样呢?我会继续好好搭建这个网站的哦，我会把像素画慢慢学好，把前端知识也好好学好，努力提升自己在审美上的能力吧，而专业技能上的话，大学的专业方向是计算机科学与技术(人工智能)啦，希望能把想做的事情都做的好好的，也希望Kevin和Venki能够一直好好的！"
         }).then(function() {
           botui.message.add({
             delay: 3000,
