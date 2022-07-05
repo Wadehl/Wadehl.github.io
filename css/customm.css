@@ -1,19 +1,23 @@
 @font-face {
     font-family: 'xiangsu';
-    src: url('./ZCOOLKuaiLe-Regular.ttf');
+    src: url('./fonts/ROBOTO-REGULAR.ttf');
     font-display: swap
 }
 @font-face {
     font-family: 'Candy';
-    src: url('./ZCOOLKuaiLe-Regular.ttf');
+    src: url('./fonts/ROBOTO-REGULAR.ttf');
     font-display: swap
 }
 @font-face{
     font-family:'zc' ;  /* 字体名自定义即可 */
-    src:url('./ZCOOLKuaiLe-Regular.ttf') ; /* 字体文件路径 */
+    src:url('./fonts/ROBOTO-REGULAR.ttf') ; /* 字体文件路径 */
     font-display : swap;
   }
-
+@font-face {
+    font-family: 'roboto';
+    src: url('./fonts/ROBOTO-REGULAR.ttf');
+    font-display: swap;
+}
 
  /*头像*/
 .card-widget.card-info .player-avatar img {
@@ -55,9 +59,16 @@
     @media screen and (max-width:776px) {
         #page-header.nav-visible #nav{
             width:95%;
+            display: none;
         }
         div#nav-right{
             display:none !important;
+        }
+        bblogo{
+            display: none;
+        }
+        #rightside{
+            display:none;
         }
     }
     nav
@@ -147,7 +158,7 @@
     }
 
     #menus>div.menus_items>div.menu_item>a.site-page>span{
-        font-family: cursive !important ;   
+        font-family: 'roboto',cursive !important ;   
     } 
 
     #page-header #nav #nav-dark{
@@ -194,10 +205,10 @@
     /*文字样式*/
 
     .item-headline a{
-        font-family: "HarmonyOS_Regular",'Candy';
+        font-family: 'roboto',"HarmonyOS_Regular",'Candy';
     }
     .card-widget.card-info{
-        font-family: "HarmonyOS_Regular";
+        font-family: 'roboto',"HarmonyOS_Regular";
     }
 
     /* #aside-content .card-info .author-info__name{
@@ -205,7 +216,7 @@
         font-weight: bold;
     } */
     #article-container pre code{
-        font-family: "HarmonyOS_Regular",'Candy'!important;
+        font-family: 'roboto',"HarmonyOS_Regular",'Candy'!important;
         font-weight: bold;
         color: black;
         font-size: 15px;
@@ -222,43 +233,43 @@
       } */
 
     a#site-name {
-        font-family: "HarmonyOS_Regular",'Candy','xiangsu','zc', 'FontAwesome', cursive !important;
+        font-family: 'roboto',"HarmonyOS_Regular",'Candy','xiangsu','zc', 'FontAwesome', cursive !important;
     }
     h1#site-title{
-        font-family: "HarmonyOS_Regular",'Candy','zc',楷体;
+        font-family: 'roboto',"HarmonyOS_Regular",'Candy','zc',楷体;
     }
     
 
     span#blog_name{
-        font-family: "HarmonyOS_Regular",'Candy','xiangsu','zc', 'FontAwesome', cursive;
+        font-family: 'roboto',"HarmonyOS_Regular",'Candy','xiangsu','zc', 'FontAwesome', cursive;
     }
 
 
 
     a{
-        font-family: "HarmonyOS_Regular",'xiangsu',楷体,'zc', 'FontAwesome', cursive;
+        font-family: 'roboto',"HarmonyOS_Regular",'xiangsu',楷体,'zc', 'FontAwesome', cursive;
         font-weight: bold;
         color: #4c4948;
     }
 
 
     span{
-        font-family: "HarmonyOS_Regular",'Candy','xiangsu',楷体,'zc', 'FontAwesome', cursive;
+        font-family: 'roboto',"HarmonyOS_Regular",'Candy','xiangsu',楷体,'zc', 'FontAwesome', cursive;
         font-weight: bold;
     }
 
     body{
-        font-family: "HarmonyOS_Regular",'xiangsu',楷体,'zc', 'FontAwesome', cursive;
+        font-family: 'roboto',"HarmonyOS_Regular",'xiangsu',楷体,'zc', 'FontAwesome', cursive;
         font-weight: bold;
     }
 
     mytag{
-        font-family: "HarmonyOS_Regular",'xiangsu','zc', cursive;
+        font-family: 'roboto',"HarmonyOS_Regular",'xiangsu','zc', cursive;
         font-weight: bold;
     }
 
     cnt{
-        font-family: "HarmonyOS_Regular",'xiangsu',楷体,'zc',cursive;
+        font-family: 'roboto',"HarmonyOS_Regular",'xiangsu',楷体,'zc',cursive;
         font-weight: bold;
         color:#A9BFE3;
         font-size: 30px;
@@ -270,7 +281,7 @@
 
 
     cnt1{
-        font-family: "HarmonyOS_Regular",'xiangsu',楷体,'zc',cursive;
+        font-family: 'roboto',"HarmonyOS_Regular",'xiangsu',楷体,'zc',cursive;
         font-weight: bold;
     }
 
@@ -295,7 +306,7 @@
 
 
     #operare_artitalk .at_button, #artitalk_main .at_button{
-        font-family: "HarmonyOS_Regular",'xiangsu',楷体;
+        font-family: 'roboto',"HarmonyOS_Regular",'xiangsu',楷体;
         font-weight: bold;
         background-color: white !important;
         color:#A9BFE3 !important;
@@ -315,7 +326,7 @@
     }
 
     #artitalk_main .cbp_tmtimeline>li .cbp_tmlabel{
-        font-family: "HarmonyOS_Regular",'xiangsu',楷体;
+        font-family: 'roboto',"HarmonyOS_Regular",'xiangsu',楷体;
         font-weight: bold !important;
     }
 
@@ -459,9 +470,7 @@
 
     
 
-    /* #sidebar #sidebar-menus{
-        width: 73% !important;
-    } */
+
 
     [data-theme='dark'] a{
         color: #FFFFFFB3 !important;

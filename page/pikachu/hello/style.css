@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'roboto';
+  src: url('../../../css/fonts/ROBOTO-REGULAR.ttf');
+}
 body {
   margin: 0;
   height: 50px;
@@ -6,7 +10,7 @@ body {
 }
 
 #heading {
-  font-family: "HarmonyOS_Regular",Indie Flower, cursive;
+  font-family: 'roboto',"HarmonyOS_Regular",Indie Flower, cursive;
   font-size: 5vw;
   letter-spacing: 0.5vw;
 }
@@ -14,10 +18,10 @@ body {
 h2 {
   margin-top: 6vw;
   font-size: 5vw;
-  font-family: "HarmonyOS_Regular",'Covered By Your Grace', cursive;
+  font-family: 'roboto',"HarmonyOS_Regular",'Covered By Your Grace', cursive;
 }
 h3 {
-    font-family: "HarmonyOS_Regular",Indie Flower, cursive;
+    font-family: 'roboto',"HarmonyOS_Regular",Indie Flower, cursive;
     font-size: 5vw;
     padding: 0;
     opacity: 0;
