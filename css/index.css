@@ -1319,7 +1319,7 @@ canvas:not(#ribbon-canvas),
   --btn-hover-color: #ffc0be;
   --btn-color: #fff;
   --btn-bg: #a9bfe3;
-  --text-bg-hover: rgba(169,191,227,0.7);
+  --text-bg-hover: rgba(73,177,245,0.7);
   --light-grey: #eee;
   --white: #fff;
   --text-highlight-color: #1f2d3d;
@@ -4908,7 +4908,7 @@ li.categoryBar-list-item {
   position: absolute;
   top: calc(50% - 0.35rem);
   color: #f47466;
-  content: '\f277';
+  content: '\f863';
   line-height: 1;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;

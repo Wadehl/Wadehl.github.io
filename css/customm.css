@@ -63,11 +63,19 @@
     /* #web_bg {
         background: linear-gradient(90deg,rgba(247,149,51,.1),rgba(243,112,85,.1) 15%,rgba(239,78,123,.1) 30%,rgba(161,102,171,.1) 44%,rgba(80,115,184,.1) 58%,rgba(16,152,173,.1) 72%,rgba(7,179,155,.1) 86%,rgba(109,186,130,.1))
     } */
+
+
     /*顶栏*/
     #page-header.nav-visible #nav{
         border-radius: 16px;
     }
-
+    #nav .menus_items .menus_item .menus_item_child{
+        border-radius: 10px;
+        padding: 3px;
+    }
+    #nav .menus_items .menus_item .menus_item_child li{
+        border-radius: 8px;
+    }
     @media screen and (max-width:776px) {
         #page-header.nav-visible #nav{
             width:95%;
@@ -184,9 +192,7 @@
         right:40px;
     }
 
-    #nav .menus_items .menus_item .menus_item_child{
-        border-radius: 16px;
-    }
+
 
     /*页脚*/
     #footer {
@@ -493,7 +499,7 @@
     }
 
     /*标题图标修改*/
-    #article-container.post-content h1:before, #article-container.post-content h4:before{
+    /* #article-container.post-content h1:before, #article-container.post-content h4:before{
         font-family: 'iconfont';
         content: '\f233';
     }
@@ -506,11 +512,112 @@
     #article-container.post-content h3:before, #article-container.post-content h6:before{
         font-family: 'iconfont';
         content: '\f234'
+    } */
+    /* 文章页H1-H6图标样式效果 */
+    h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
+        -webkit-animation: ccc 1.6s linear infinite ;
+        animation: ccc 1.6s linear infinite ;
     }
+    @-webkit-keyframes ccc {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg)
+        }
+        to {
+            -webkit-transform: rotate(-1turn);
+            transform: rotate(-1turn)
+        }
+    }
+    @keyframes ccc {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg)
+        }
+        to {
+            -webkit-transform: rotate(-1turn);
+            transform: rotate(-1turn)
+        }
+    }
+    h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
+        -webkit-animation: ccc 1.6s linear infinite ;
+        animation: ccc 1.6s linear infinite ;
+    }
+    @-webkit-keyframes ccc {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg)
+        }
+        to {
+            -webkit-transform: rotate(-1turn);
+            transform: rotate(-1turn)
+        }
+    }
+    @keyframes ccc {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg)
+        }
+        to {
+            -webkit-transform: rotate(-1turn);
+            transform: rotate(-1turn)
+        }
+    }
+    #content-inner.layout h1::before {
+        color: #ef50a8 ;
+        margin-left: -1.55rem;
+        font-size: 1.3rem;
+        margin-top: -0.23rem;
+    }
+    #content-inner.layout h2::before {
+        color: #fb7061 ;
+        margin-left: -1.35rem;
+        font-size: 1.1rem;
+        margin-top: -0.12rem;
+    }
+    #content-inner.layout h3::before {
+        color: #ffbf00 ;
+        margin-left: -1.22rem;
+        font-size: 0.95rem;
+        margin-top: -0.09rem;
+    }
+    #content-inner.layout h4::before {
+        color: #a9e000 ;
+        margin-left: -1.05rem;
+        font-size: 0.8rem;
+        margin-top: -0.09rem;
+    }
+    #content-inner.layout h5::before {
+        color: #57c850 ;
+        margin-left: -0.9rem;
+        font-size: 0.7rem;
+        margin-top: 0.0rem;
+    }
+    #content-inner.layout h6::before {
+        color: #5ec1e0 ;
+        margin-left: -0.9rem;
+        font-size: 0.66rem;
+        margin-top: 0.0rem;
+    }
+    #content-inner.layout h1:hover, #content-inner.layout h2:hover, #content-inner.layout h3:hover, #content-inner.layout h4:hover, #content-inner.layout h5:hover, #content-inner.layout h6:hover {
+        color: #49b1f5 ;
+    }
+    #content-inner.layout h1:hover::before, #content-inner.layout h2:hover::before, #content-inner.layout h3:hover::before, #content-inner.layout h4:hover::before, #content-inner.layout h5:hover::before, #content-inner.layout h6:hover::before {
+        color: #49b1f5 ;
+        -webkit-animation: ccc 3.2s linear infinite ;
+        animation: ccc 3.2s linear infinite ;
+    }
+    /* 页面设置icon转动速度调整 */
+    #rightside_config i.fas.fa-cog.fa-spin {
+        animation: fa-spin 5s linear infinite ;
+    }
+
+    /*botui*/
     #card-widget>card-botui{
         background: #d1e6fa ;
     }
-    
+
+
+    /*页脚*/
     @media screen and (max-width:776px){
         div#crowd {
             display: none;
@@ -526,5 +633,72 @@
         }
     }
 
-
-
+/*标签页,分类页*/
+/* 分类目录条、标签目录条 */
+.tag-cloud-list a {
+    margin: 6px 13px;
+    border-radius: 9px;
+    background: #f2f6fc;
+}
+#catalog-bar {
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    display: flex;
+    border: var(--card-border);
+    margin-bottom: 1rem;
+    justify-content: space-between;
+  }
+  
+  #catalog-bar:hover {
+    border-color: var(--main);
+  }
+  
+  #catalog-bar i {
+    line-height: inherit;
+  }
+  
+  #catalog-list {
+    /* 分类/标签较少时，可以选择不设置 width，居中显示 catalog-list-item */
+    width: 100%;
+    margin: 0 0.5rem;
+    display: flex;
+    white-space: nowrap;
+    overflow-x: scroll;
+  }
+  
+  #catalog-list::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .catalog-list-item a {
+    padding: .3rem;
+    font-weight: bold;
+    border-radius: 8px;
+    color: var(--font-color);
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+  }
+  
+  .catalog-list-item:hover a {
+    background: var(--main);
+    color: var(--second);
+  }
+  
+  .catalog-list-item.selected a {
+    background: var(--light-text);
+    color: var(--second);
+    border-radius: 8px;
+  }
+  
+  a.catalog-more {
+    min-width: fit-content;
+    font-weight: bold;
+    color: var(--font-color);
+  }
+  
+  a.catalog-more:hover {
+    color: var(--main);
+  }
