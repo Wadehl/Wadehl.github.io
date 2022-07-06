@@ -90,6 +90,9 @@
         #rightside{
             display:none;
         }
+        a#te-home{
+            display: none;
+        }
     }
     nav
     span#name{

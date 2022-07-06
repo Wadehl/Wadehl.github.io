@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://dayswithvenki.top/bb/index.html</loc>
+    
+    <lastmod>2022-07-06</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://dayswithvenki.top/categories/index.html</loc>
     
     <lastmod>2022-07-06</lastmod>
@@ -107,13 +114,6 @@
   </url>
   
   <url>
-    <loc>http://dayswithvenki.top/bb/index.html</loc>
-    
-    <lastmod>2022-07-05</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://dayswithvenki.top/posts/33f59116.html</loc>
     
     <lastmod>2022-07-02</lastmod>
@@ -184,14 +184,14 @@
   </url>
   
   <url>
-    <loc>http://dayswithvenki.top/posts/d30473e4.html</loc>
+    <loc>http://dayswithvenki.top/posts/4a0d225e.html</loc>
     
     <lastmod>2022-05-19</lastmod>
     
   </url>
   
   <url>
-    <loc>http://dayswithvenki.top/posts/4a0d225e.html</loc>
+    <loc>http://dayswithvenki.top/posts/d30473e4.html</loc>
     
     <lastmod>2022-05-19</lastmod>
     
@@ -319,14 +319,14 @@
   </url>
   
   <url>
-    <loc>http://dayswithvenki.top/tags/%F0%9F%8E%A8%E5%83%8F%E7%B4%A0%E7%94%BB/</loc>
+    <loc>http://dayswithvenki.top/tags/%F0%9F%91%BELaTeX/</loc>
     <lastmod>2022-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://dayswithvenki.top/tags/%F0%9F%91%BELaTeX/</loc>
+    <loc>http://dayswithvenki.top/tags/%F0%9F%8E%A8%E5%83%8F%E7%B4%A0%E7%94%BB/</loc>
     <lastmod>2022-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -370,14 +370,14 @@
   </url>
   
   <url>
-    <loc>http://dayswithvenki.top/categories/%E6%8F%92%E7%94%BB/</loc>
+    <loc>http://dayswithvenki.top/categories/MarkDown/</loc>
     <lastmod>2022-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://dayswithvenki.top/categories/MarkDown/</loc>
+    <loc>http://dayswithvenki.top/categories/%E6%8F%92%E7%94%BB/</loc>
     <lastmod>2022-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

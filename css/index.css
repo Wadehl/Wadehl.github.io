@@ -3622,21 +3622,29 @@ li.categoryBar-list-item {
 #post-comment .comment-wrap > div:nth-child(2) {
   display: none;
 }
-#site-name:hover:before {
-  position: fixed;
-  width: fit-content;
-  margin: auto;
-  left: 0;
-  right: 0;
-  top: 10%;
-  border-radius: 10px;
-  text-align: center;
+#te-home {
+  position: absolute;
+  left: 43px;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
   z-index: 100;
-  content: attr(data-title);
-  font-size: 20px;
-  color: #fff;
   padding: 10px;
-  background-color: rgba(169,191,227,0.9);
+  top: -15px;
+  font-size: 30px;
+}
+#te-home:hover {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+#te-home:hover + #site-name {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  display: none;
+  z-index: 66;
+  color: transparent;
 }
 [data-theme=dark] a#site-name:hover:before {
   background-color: rgba(18,18,18,0.8);
