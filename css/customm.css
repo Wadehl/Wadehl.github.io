@@ -25,6 +25,46 @@
     font-display: swap;
 
 }
+
+/*代码颜色*/
+/* .hljs-comment {
+    color: #205375 !important;
+} */
+#article-container pre code{
+    font-family: 'roboto',"HarmonyOS_Regular",'Candy'!important;
+    font-weight: bold;
+    color: black;
+    font-size: 15px;
+}
+#article-container pre, #article-container figure.highlight{
+    font-size: 15px !important;
+    color :#396EB0 !important;
+    background: #FAFAFA !important;
+    font-weight: bold;
+    border-radius: 16px;
+}
+.hljs-keyword, .hljs-selector-tag, .hljs-literal, .hljs-addition {
+    color: #90AACB !important;
+}
+.hljs-addition, .hljs-built_in, .hljs-bullet, .hljs-code {
+    color: #051367 !important;
+}
+#article-container figure.highlight table{
+    background: #FAFAFA !important;
+}
+#article-container .highlight-tools{
+    background: #005691 !important;
+    color: white !important;
+    border-radius: 10px 10px 0 0;
+}
+#article-container figure.highlight .hljs {
+    color: #005691 !important;
+    background: #FAFAFA !important;
+}
+.hljs-deletion, .hljs-number, .hljs-quote, .hljs-selector-class, .hljs-selector-id, .hljs-string, .hljs-template-tag, .hljs-type{
+    color: #6FB2D2 !important;
+}
+
 /*哔哔*/
 #bbTimeList{
     font-family: 'bb';
@@ -236,17 +276,7 @@
         font-family: 'Candy',auto;
         font-weight: bold;
     } */
-    #article-container pre code{
-        font-family: 'roboto',"HarmonyOS_Regular",'Candy'!important;
-        font-weight: bold;
-        color: black;
-        font-size: 15px;
-    }
-    #article-container pre, #article-container figure.highlight{
-        font-size: 15px !important;
-        color :#a9bfe3 !important;
-        font-weight: bold;
-    }
+
 
     /* #aside-content .card-info .author-info__description {
         font-family:'Candy','xiangsu',auto;

@@ -6,7 +6,7 @@
   <link href="http://dayswithvenki.top/atom.xml" rel="self"/>
   
   <link href="http://dayswithvenki.top/"/>
-  <updated>2022-04-30T11:58:25.958Z</updated>
+  <updated>2022-07-07T09:19:05.159Z</updated>
   <id>http://dayswithvenki.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python 爬虫</title>
+    <link href="http://dayswithvenki.top/posts/python-crawler.html"/>
+    <id>http://dayswithvenki.top/posts/python-crawler.html</id>
+    <published>2022-07-06T16:00:00.000Z</published>
+    <updated>2022-07-07T09:19:05.159Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="一些关键信息"><a href="#一些关键信息" class="headerlink" title="一些关键信息"></a>一些关键信息</h2><h3 id="请求头的关键信息"><a href="#请求头的关键信息" class="headerlink" title="请求头的关键信息"></a>请求头的关键信息</h3><p>1.User-Agent：请求载体的身份识别。（用什么发的请求）</p><p>2.Referer：防盗链。（请求的页面来源）</p><p>3.Cookie：本地字符串数据信息。（用户登录信息，反爬的token）</p><h3 id="请求方式"><a href="#请求方式" class="headerlink" title="请求方式"></a>请求方式</h3><p>1.get</p><p>2.post</p><h3 id="响应头的关键信息"><a href="#响应头的关键信息" class="headerlink" title="响应头的关键信息"></a>响应头的关键信息</h3><p>1.Cookie：本地字符串数据信息。（用户登录信息，反爬的token）</p><p>2.一些奇怪的字符串（一般是token字样，防止攻击和反爬）</p><h2 id="得到页面源代码可用库"><a href="#得到页面源代码可用库" class="headerlink" title="得到页面源代码可用库:"></a>得到页面源代码可用库:</h2><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> requests<br><br><span class="hljs-comment">#from urllib.request import urlopen </span><br></code></pre></td></tr></tbody></table></figure><h3 id="urlopen用法"><a href="#urlopen用法" class="headerlink" title="urlopen用法"></a>urlopen用法</h3><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">url = <span class="hljs-string">'https://www.baidu.com'</span><br>resp = urlopen(url)<br><span class="hljs-built_in">print</span>(resp.read().decode(<span class="hljs-string">'utf-8'</span>))<span class="hljs-comment">#用utf-8解码得到页面源代码</span><br></code></pre></td></tr></tbody></table></figure><h3 id="request库用法"><a href="#request库用法" class="headerlink" title="request库用法"></a>request库用法</h3><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs python">url = <span class="hljs-string">'https://www.baidu.com/s'</span><br><span class="hljs-comment">#请求头关键信息,可通过f12查看</span><br>headers = {<br><span class="hljs-string">'User-Agent'</span>:<span class="hljs-string">''</span><br><span class="hljs-string">'Cookie'</span>:<span class="hljs-string">''</span><br><span class="hljs-string">'Referer'</span>:<span class="hljs-string">''</span><br>}<br>params = {<br>    <span class="hljs-string">'wd'</span> = <span class="hljs-string">'python'</span><br>}<br><span class="hljs-comment">#连接在url后方的:如www.baidu.com/s?</span><br>resp = requests.get(url, params=params, headers=headers)<br>resp.encoding = <span class="hljs-string">'utf-8'</span><span class="hljs-comment">#将resp的编码改为utf-8</span><br><span class="hljs-built_in">print</span>(resp.text) <span class="hljs-comment">#得到页面源代码</span><br><span class="hljs-built_in">print</span>(resp.url) <span class="hljs-comment">#得到页面的url连接，当前为https://www.baidu.com/s?wd=python</span><br></code></pre></td></tr></tbody></table></figure>]]></content>
+    
+    
+    <summary type="html">网页爬虫初学——关于如何通过Python爬取网页源代码</summary>
+    
+    
+    
+    
+    <category term="🐍Python" scheme="http://dayswithvenki.top/tags/%F0%9F%90%8DPython/"/>
+    
+    <category term="🕷️爬虫" scheme="http://dayswithvenki.top/tags/%F0%9F%95%B7%EF%B8%8F%E7%88%AC%E8%99%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>Weeks3</title>
@@ -57,7 +78,7 @@
     <link href="http://dayswithvenki.top/posts/genshin.html"/>
     <id>http://dayswithvenki.top/posts/genshin.html</id>
     <published>2022-04-17T11:16:29.252Z</published>
-    <updated>2022-07-06T02:07:17.116Z</updated>
+    <updated>2022-07-07T08:25:36.467Z</updated>
     
     <content type="html"><![CDATA[<h1 align="center" id="像素插画2">    <font color="#A9BFE3">像素插画2</font></h1>  <p><img src="https://s2.loli.net/2022/04/17/jmTBSL2lNfXnGAs.png" alt="image.png"></p><h2 id="胡桃">    胡桃:</h2><p><img src="https://s2.loli.net/2022/04/17/OlMTq5i9xoN4W6B.png" alt="pixil-frame-0 _62_.png"></p><h2 id="甘雨">    甘雨:</h2><p><img src="https://s2.loli.net/2022/04/17/fLUZzdxYl95bFvW.png" alt="pixil-frame-0 _69_.png"></p><h2 id="魈">    魈:</h2><p><img src="https://s2.loli.net/2022/04/17/5TuRrHKWC7xISBv.png" alt="pixil-frame-0 _75_.png"></p><h2 id="宵宫">    宵宫:</h2><p><img src="https://s2.loli.net/2022/04/17/MbgN8zFRr6pe2Bk.png" alt="pixil-frame-0 _71_.png"></p><h2 id="神里">    神里:</h2><p><img src="https://s2.loli.net/2022/04/17/7STxAz6sHEvi3DR.png" alt="pixil-frame-0 _76_.png"></p><h2 id="万叶">    万叶:</h2><p><img src="https://s2.loli.net/2022/04/17/yrD3hMNd8ZzQjC6.png" alt="pixil-frame-0 _73_.png"></p>]]></content>
     
@@ -158,7 +179,7 @@
     <link href="http://dayswithvenki.top/posts/algorithm2.html"/>
     <id>http://dayswithvenki.top/posts/algorithm2.html</id>
     <published>2022-03-25T02:43:40.000Z</published>
-    <updated>2022-07-06T02:02:51.090Z</updated>
+    <updated>2022-07-07T08:26:04.843Z</updated>
     
     <content type="html"><![CDATA[<p></p><h1 align="center" id="1时间复杂性">    1.时间复杂性</h1><br><div class="note success simple"><font color="green">最优算法: 时间复杂性O(n log n),空间复杂性O(1)</font></div><p></p><h2 id="1o符号上界">    <font color="#a9bfe3">1)$O$符号(上界)</font></h2><p>  令f(n)和g(n)是从自然数集到非负实数集的两个函数，若存在一个自然数<script type="math/tex">n_{0}</script>和一个常数c&gt;0，使得:</p><script type="math/tex; mode=display">{\forall}n\geq n_{0},f(n)\leq cg(n)</script><p>则f(n)为$O$(g(n))。</p><p>  若&nbsp;&nbsp;<script type="math/tex">\lim_{n\to \infty}\frac{f(n)}{g(n)}</script>  存在</p><p>那么:</p><script type="math/tex; mode=display">\lim_{n\to\infty}\frac{f(n)}{g(n)}\neq \infty 则: f(n)=O(g(n))</script><p><br></p><p><br></p><h2 id="2omega符号下界">    <font color="#a9bfe3">2)$\Omega$符号(下界)</font></h2><p>  令f(n)和g(n)是从自然数集到非负实数集的两个函数，若存在一个自然数<script type="math/tex">n_{0}</script>和一个常数c&gt;0，使得:</p><script type="math/tex; mode=display">{\forall}n\geq n_{0},f(n)\geq cg(n)</script><p>则f(n)为$\Omega$(g(n))。</p><p>  若&nbsp;&nbsp;<script type="math/tex">\lim_{n\to \infty}\frac{f(n)}{g(n)}</script>  存在</p><p>那么:</p><script type="math/tex; mode=display">\lim_{n\to\infty}\frac{f(n)}{g(n)}\neq0则 f(n)=Ω(g(n))</script><p><br></p><p><br></p><h2 id="3theta符号">    <font color="#a9bfe3">3)$\Theta$符号</font></h2><p>  令f(n)和g(n)是从自然数集到非负实数集的两个函数，若存在一个自然数$n_{0}$和常数$c_1,c_2$使得:</p><script type="math/tex; mode=display">{\forall}n\geq n_{0}, c_1g(n)\leq f(n) \leq c_2g(n)</script><p>则f(n)为$\Theta$(g(n))。</p><p>  若&nbsp;&nbsp;<script type="math/tex">\lim_{n\to \infty}\frac{f(n)}{g(n)}</script>  存在</p><p>那么:</p><script type="math/tex; mode=display">\lim_{n\to\infty}\frac{f(n)}{g(n)}=c则 f(n)=\Theta(g(n))\quad\quad(其中c\geq 0)</script><div class="note info simple"><p>Summary: 可以认为$O$类似于 $\leq$, $\Omega$类似于$\geq$,$\Theta$类似于=</p></div> <h2 id="举例">    <font color="#a9bfe3">举例:</font></h2><h3 align="center" id="fnlogn2"><font color="#ffa516">$f(n)=\log{n^2}$</font></h3>$$\because \lim_{n\to\infty}\frac{\log{n^2}}{n}=\lim_{n\to\infty}\frac{2\log{n}}{n}=\frac{2}{\ln{2}}\lim_{n\to\infty}\frac{1}{n}=0 \\\\$$$$\therefore f(n)=O(n)\quad but \quad not \quad \Omega(n) or \Theta(n)$$$$\because \log{n^2}=2\log{n} \therefore\log{n^2}=\Theta(\log{n}) \\\\    \therefore \log{n^k}=\Theta(n)\\$$<br><h3 align="center" id="sum_j1nlogj"><font color="#ffa516">$ \sum_{j=1}^{n}\log{j}$</font></h3><br>$$\because \sum_{j=1}^{n}\log{j} \leq \sum_{j=1}^{n}\log{n}$$$$\therefore \sum_{j=1}^{n}\log{j} = O(n\log{n}) $$$$又  \because \sum_{j=1}^{n}\log{j} \geq \sum_{j=1}^{\frac{n}2}\log{\frac{n}2}=\frac{n}{2}\log{\frac{n}2}=\frac{n}{2}\log{n} -\frac{n}{2}$$$$\therefore \sum_{j=1}^{n} = \Omega(n\log{n})$$$$\therefore \sum_{j=1}^{n} = \Theta(n\log{n})$$<br><h3 align="center" id="logn"><font color="#ffa516">$\log{n!}$</font></h3><br>$$\because \log{n!}=\log({n*(n-1)*\dots*1})=\log n *\log(n-1) *\dots*\log 1=\sum_{j=1}^{n}\log j$$$$\therefore \log n! = \Theta (n\log n)$$<h2 id="3o符号">    <font color="#a9bfe3">3)$o$符号</font></h2><script type="math/tex; mode=display">f(n)=o(g(n))当且仅当f(n)=O(g(n)),g(n)\neq O(g(n))</script><div class="note info simple"><p>用f(n)$\prec$g(n)表示f(n)是o(g(n))的：</p></div><script type="math/tex; mode=display">1 \prec \log \log n \prec \log n\prec \sqrt n \prec n^{\frac3 4}\prec n\prec n\log n \prec n^2 \prec n! \prec2^{n^2}</script>]]></content>
     
@@ -391,25 +412,6 @@
     
     
     <summary type="html">2022/2/23 Day 2</summary>
-    
-    
-    
-    <category term="Days" scheme="http://dayswithvenki.top/categories/Days/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Day1</title>
-    <link href="http://dayswithvenki.top/posts/d30473e4.html"/>
-    <id>http://dayswithvenki.top/posts/d30473e4.html</id>
-    <published>2022-03-01T15:17:45.858Z</published>
-    <updated>2022-05-19T02:14:00.896Z</updated>
-    
-    <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <script id="hbeData" type="hbeData" data-hmacdigest="afbbf8aa6e0244c257ed17e8232f5bd12ab70a916dcbd66a2c4bbd8f2005abcb">63a42796bbf34b019cf859df3c20cdcba408926298dbc0c16137aa5ccc2d3dd829fc86b0f63c3d12ab7536a68887bba701fd150a865e048022a873c1ddbf48ecad276d1837d616954181ad051e5ae2ca63f28d4ead179f310b08ae3f940f5eba1a2a22dda13a5289f723710ec99049e6aadf63fcf409c096ad0102b25d3c00235917351f60b4b585f57ceecfa8e05efb91711315b7b7692cf27239246a8ab6d00c924a349b4329263378f7646dc440b7264c03e41507b748a8a68f1cf0cb3db6a633294aecdda45ce8a53ce4c46611cffd159ee4185caf930abec071a9cec8680d584763bae1793394974d7526eeec2e1f6e9bb811790ed42ce5aebd5d8724dba5c17b1adca32c78a7f98bb09d4e57d52f98d00445e74de7e97daf4795f587a4af9be8d80e9f3eaa41fef4feede5dd76c5bc34c5de0c04382c7b50127f045790fd9da50c8602bee72a023d2f0cb3945dac58292b8c8a909ca9d64dac07cceddf5d69901acb91486e7e0ccae67671310d74e1134eff9e8c6d70b42bc616652e5e6044b62cb921f236827e2b0b4ff4258093e40c09a4e050e4b2db4ad16396b572b9a8138eb52c5179794e02a5edd8b84e05eea678bd81aec0bb3ba694020fcf22d0e1f39dd4aa7586cf2f899d180fa575ef0eb0d26e55574d3ff009f85c70ab4687d515d18dfba349eace9310be510fcaf615e4e877ab38691cb7c636740072e91f5e5fa14e0a009f2530048c6fb926cd0d0c0347d8e0821367adcdde69b9997f209b0dcb3c39ab92dd7b95add2844ed1a94548bd86140683b31931c5318658e3e4d78eab8b1083431cd33761d0818c111c3a139ec762c6aadbf6d69eaa66a7fb53c2a67f8435f36e7ae207e37dd291e89cfe2205bc7d9c5223ff90a13e681037ee239b104f086a44dafdb4c3f914487ab9b99fbea5f01cc48098efed95c97675e50ddd889bfc01b533ee680d0798e4ff30fac9d2483debe4d3e949e0aaaabb51d8a07676d011f1ae40c23f662e67c892</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-    
-    
-    <summary type="html">2022/2/22 Day 1</summary>
     
     
     

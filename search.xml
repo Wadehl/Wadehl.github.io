@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>Python 爬虫</title>
+      <link href="/posts/python-crawler.html"/>
+      <url>/posts/python-crawler.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="一些关键信息"><a href="#一些关键信息" class="headerlink" title="一些关键信息"></a>一些关键信息</h2><h3 id="请求头的关键信息"><a href="#请求头的关键信息" class="headerlink" title="请求头的关键信息"></a>请求头的关键信息</h3><p>1.User-Agent：请求载体的身份识别。（用什么发的请求）</p><p>2.Referer：防盗链。（请求的页面来源）</p><p>3.Cookie：本地字符串数据信息。（用户登录信息，反爬的token）</p><h3 id="请求方式"><a href="#请求方式" class="headerlink" title="请求方式"></a>请求方式</h3><p>1.get</p><p>2.post</p><h3 id="响应头的关键信息"><a href="#响应头的关键信息" class="headerlink" title="响应头的关键信息"></a>响应头的关键信息</h3><p>1.Cookie：本地字符串数据信息。（用户登录信息，反爬的token）</p><p>2.一些奇怪的字符串（一般是token字样，防止攻击和反爬）</p><h2 id="得到页面源代码可用库"><a href="#得到页面源代码可用库" class="headerlink" title="得到页面源代码可用库:"></a>得到页面源代码可用库:</h2><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> requests<br><br><span class="hljs-comment">#from urllib.request import urlopen </span><br></code></pre></td></tr></tbody></table></figure><h3 id="urlopen用法"><a href="#urlopen用法" class="headerlink" title="urlopen用法"></a>urlopen用法</h3><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">url = <span class="hljs-string">'https://www.baidu.com'</span><br>resp = urlopen(url)<br><span class="hljs-built_in">print</span>(resp.read().decode(<span class="hljs-string">'utf-8'</span>))<span class="hljs-comment">#用utf-8解码得到页面源代码</span><br></code></pre></td></tr></tbody></table></figure><h3 id="request库用法"><a href="#request库用法" class="headerlink" title="request库用法"></a>request库用法</h3><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs python">url = <span class="hljs-string">'https://www.baidu.com/s'</span><br><span class="hljs-comment">#请求头关键信息,可通过f12查看</span><br>headers = {<br><span class="hljs-string">'User-Agent'</span>:<span class="hljs-string">''</span><br><span class="hljs-string">'Cookie'</span>:<span class="hljs-string">''</span><br><span class="hljs-string">'Referer'</span>:<span class="hljs-string">''</span><br>}<br>params = {<br>    <span class="hljs-string">'wd'</span> = <span class="hljs-string">'python'</span><br>}<br><span class="hljs-comment">#连接在url后方的:如www.baidu.com/s?</span><br>resp = requests.get(url, params=params, headers=headers)<br>resp.encoding = <span class="hljs-string">'utf-8'</span><span class="hljs-comment">#将resp的编码改为utf-8</span><br><span class="hljs-built_in">print</span>(resp.text) <span class="hljs-comment">#得到页面源代码</span><br><span class="hljs-built_in">print</span>(resp.url) <span class="hljs-comment">#得到页面的url连接，当前为https://www.baidu.com/s?wd=python</span><br></code></pre></td></tr></tbody></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 🐍Python </tag>
+            
+            <tag> 🕷️爬虫 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Weeks3</title>
       <link href="/posts/weeks3.html"/>
       <url>/posts/weeks3.html</url>
