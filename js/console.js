@@ -17,3 +17,4 @@ ____   ____             __   .__    ____     ____  __.          .__
     console.log(string.makeMulti());
     console.log("Made by Kevin!!");
   }
+
