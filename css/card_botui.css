@@ -295,14 +295,14 @@ button.botui-actions-buttons-button:not(:last-child){
   border-radius: 10px;
   vertical-align:middle;
   display:table-cell;
-	background: #494A5F;
+	background: #002FA6;
 	color: #D5D6E2;
 	font-weight: 500;
 	font-size: 1.05em;
 	font-family: 'xiangsu',"Microsoft YaHei","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif;
 }
 .facemain a{ color: rgba(255, 255, 255, 0.6);outline: none;text-decoration: none;-webkit-transition: 0.2s;transition: 0.2s;}
-.facemain a:hover,a:focus{color:#74777b;text-decoration: none;}
+.facemain a:hover,a:focus{color:#002FA6;text-decoration: none;}
 
 .facemain figure {
   width: 200px;

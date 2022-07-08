@@ -115,15 +115,14 @@
 
   #aside-content .card-info #card-info-btn{
     border-radius: 16px;
-    background-color: #428aef !important;
+    background-color: #002FA6 !important;
   }
   a#card-info-btn.button--animated::before{
-    -webkit-transition:none !important;
     transition:transform 0.5s ease-out;
-    transform-origin: none !important;
+    transform-origin: 50% 50% 0;
   }
 
   .button--animated::before{
-    background: #ffb03b;
+    background: #f4ab47;
     border-radius: 16px;
   }
