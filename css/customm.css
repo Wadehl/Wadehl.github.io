@@ -92,9 +92,11 @@
         /* background: var(--light_bg_color) */
         background: transparent;
         -webkit-box-shadow: none; 
+        box-shadow: none;
+        transition: none;
         -moz-transition: none;
         -o-transition: none;
-        -ms-transition: none
+        -ms-transition: none 
     }
     [data-theme='light'].layout > div:first-child:not(.recent-posts){
         background: white !important
@@ -131,7 +133,9 @@
             display:none;
         }
         a#te-home{
-            display: none;
+            font-size: 25px;
+            top: -6px;
+            left: 30px;
         }
     }
     nav
@@ -354,7 +358,6 @@
             right:-30px;
         }
     }
-
 
     #operare_artitalk .at_button, #artitalk_main .at_button{
         font-family: 'roboto',"HarmonyOS_Regular",'xiangsu',楷体;
