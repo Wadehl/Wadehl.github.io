@@ -741,5 +741,5 @@
 
 /*碎碎念artitalk*/
 div#shuoshuo_content>span.cbp_tmlabel>a{
-    color:royalblue;
+    color:royalblue !important;
 }
