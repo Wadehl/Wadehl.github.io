@@ -738,3 +738,8 @@
   a.catalog-more:hover {
     color: var(--main);
   }
+
+/*碎碎念artitalk*/
+div#shuoshuo_content>span.cbp_tmlabel>a{
+    color:royalblue;
+}
