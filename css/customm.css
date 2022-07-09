@@ -25,11 +25,18 @@
     font-display: swap;
 
 }
+/*guli*/
+.heo-guli:hover{
+    transform: scale(1.2);
+}
 
 /*代码颜色*/
 /* .hljs-comment {
     color: #205375 !important;
 } */
+#article-container .tabs > .nav-tabs > .tab.active button{
+    font-weight: bold;
+}
 #article-container pre code{
     font-family: 'roboto',"HarmonyOS_Regular",'Candy'!important;
     font-weight: bold;
@@ -41,7 +48,6 @@
     color :#396EB0 !important;
     background: #FAFAFA !important;
     font-weight: bold;
-    border-radius: 16px;
 }
 .hljs-keyword, .hljs-selector-tag, .hljs-literal, .hljs-addition {
     color: #90AACB !important;
