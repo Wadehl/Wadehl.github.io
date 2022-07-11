@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://dayswithvenki.top/posts/python-remodule.html</loc>
+    <lastmod>2022-07-11</lastmod>
+  </url>
+  <url>
     <loc>http://dayswithvenki.top/posts/python-requests.html</loc>
-    <lastmod>2022-07-09</lastmod>
+    <lastmod>2022-07-11</lastmod>
   </url>
   <url>
     <loc>http://dayswithvenki.top/posts/python-crawler.html</loc>
@@ -69,11 +73,11 @@
     <lastmod>2022-07-02</lastmod>
   </url>
   <url>
-    <loc>http://dayswithvenki.top/posts/weeks2.html</loc>
+    <loc>http://dayswithvenki.top/posts/weeks1.html</loc>
     <lastmod>2022-05-19</lastmod>
   </url>
   <url>
-    <loc>http://dayswithvenki.top/posts/weeks1.html</loc>
+    <loc>http://dayswithvenki.top/posts/weeks2.html</loc>
     <lastmod>2022-05-19</lastmod>
   </url>
   <url>
