@@ -25,6 +25,12 @@
     font-display: swap;
 
 }
+/*文章头部*/
+#page-header #post-info {
+    bottom: 1.5rem;
+    text-align: left;
+}
+
 /*guli*/
 .heo-guli:hover{
     transform: scale(1.2);
@@ -115,7 +121,7 @@
 
     /*顶栏*/
     #page-header.nav-visible #nav{
-        border-radius: 16px;
+        border-radius: 0 0 16px 16px;
     }
     #nav .menus_items .menus_item .menus_item_child{
         border-radius: 10px;
@@ -748,4 +754,9 @@
 /*碎碎念artitalk*/
 div#shuoshuo_content>span.cbp_tmlabel>a{
     color:royalblue !important;
+}
+
+/*首页文章*/
+#recent-posts > .recent-post-item .post_cover img.post_bg{
+    border-radius: 8px;
 }
