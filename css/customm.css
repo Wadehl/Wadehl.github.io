@@ -30,7 +30,9 @@
     bottom: 1.5rem;
     text-align: left;
 }
-
+#page-header.post-bg::before {
+    background-color: rgba(0,0,0,0.3);
+}
 /*guli*/
 .heo-guli:hover{
     transform: scale(1.2);
@@ -158,7 +160,7 @@
         z-index:102;
     }
 
-    #page-header #nav #nav-right {
+    #nav #nav-right {
         position: absolute;
         right: 80px;
         top: 10px;
@@ -240,7 +242,7 @@
         font-family: 'roboto',cursive !important ;   
     } 
 
-    #page-header #nav #nav-dark{
+    #nav #nav-dark{
         position:absolute;
         top:14px;
         right: 40px;

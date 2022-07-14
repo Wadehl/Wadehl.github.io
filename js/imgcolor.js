@@ -1,6 +1,6 @@
 var path = document.getElementById("post-cover").src;
 console.log(path);
-if(path !== 'https://s2.loli.net/2022/04/17/ScAohKOjaIgvlVL.png'){ //将这里的网站前面替换成你自己的,判断是否是不想变的图片，例如放入主页图片url
+if(path !== 'wadehl-github-io.vercel.app'|| path !== 'dayswithvenki.top' || path !== 'localhost:4000'){ //将这里的网站前面替换成你自己的,判断是否是不想变的图片，例如放入主页图片url
     var httpRequest = new XMLHttpRequest();    httpRequest.open('GET', path + '?imageAve', true);
     httpRequest.send();
     httpRequest.onreadystatechange = function () {
