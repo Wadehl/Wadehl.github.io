@@ -6,7 +6,7 @@
   <link href="http://dayswithvenki.top/atom.xml" rel="self"/>
   
   <link href="http://dayswithvenki.top/"/>
-  <updated>2022-07-14T08:12:39.574Z</updated>
+  <updated>2022-07-17T13:01:21.059Z</updated>
   <id>http://dayswithvenki.top/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python 多线程</title>
+    <link href="http://dayswithvenki.top/posts/python-thread.html"/>
+    <id>http://dayswithvenki.top/posts/python-thread.html</id>
+    <published>2022-07-16T07:20:00.000Z</published>
+    <updated>2022-07-17T13:01:21.059Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> threading <span class="hljs-keyword">import</span> Thread<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">func</span>():<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1000</span>):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">'func'</span>, i)<br><br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">'__main__'</span>:<br>    t = Thread(target=func)<span class="hljs-comment"># 创建线程并给线程安排任务</span><br>    t.start()<span class="hljs-comment"># 多线程状态为可以开始工作状态，具体执行时间由CPU决定</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1000</span>):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">'main'</span>, i)<br>        <br></code></pre></td></tr></tbody></table></figure><p>运行结果:</p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs python">funcmain <span class="hljs-number">0</span> <span class="hljs-number">0</span><br>func<br>main <span class="hljs-number">1</span><br>func <span class="hljs-number">2</span><br>func <span class="hljs-number">3</span><br>func <span class="hljs-number">4</span><br> <span class="hljs-number">1</span><br>main func <span class="hljs-number">5</span><br>func <span class="hljs-number">6</span><br>func2<br> <span class="hljs-number">7</span><br>......<br>funcmain  <span class="hljs-number">998992</span><br><br>funcmain  <span class="hljs-number">999993</span><br><br>main <span class="hljs-number">994</span><br>main <span class="hljs-number">995</span><br>main <span class="hljs-number">996</span><br>main <span class="hljs-number">997</span><br>main <span class="hljs-number">998</span><br>main <span class="hljs-number">999</span><br><br></code></pre></td></tr></tbody></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;sp</summary>
+      
+    
+    
+    
+    
+    <category term="🐍Python" scheme="http://dayswithvenki.top/tags/%F0%9F%90%8DPython/"/>
+    
+    <category term="🕷️爬虫" scheme="http://dayswithvenki.top/tags/%F0%9F%95%B7%EF%B8%8F%E7%88%AC%E8%99%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>Python 爬虫实战！</title>
@@ -390,27 +414,6 @@
     <updated>2022-07-06T02:04:44.820Z</updated>
     
     <content type="html"><![CDATA[<p>图片来源:<a href="https://blog.csdn.net/qq_40828914/article/details/105929384">https://blog.csdn.net/qq_40828914/article/details/105929384</a></p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs 记忆公式">1.倒三角：<br>sin²+cos²=1<br>tan²+1=sec²<br>1+cot²=csc²<br>2.对角线倒数<br>3.邻点积<br>tan*cos=sin<br>sin*cot=cos<br>4.求导:左三角导数正，右三角导数负<br>上互换：<br>sin'=cos<br>cos'=-sin<br>中下2：<br>tan'=sec²<br>cot'=-csc²<br>下中下：<br>sec'=tan*sec<br>csc=-cot*csc<br>5.求积分：<br>sec积分：ln|sec+tan|+C<br>csc积分：-ln|csc+cot|+C<br><br></code></pre></td></tr></tbody></table></figure><div align="center"><img src="https://img-blog.csdnimg.cn/2020061309172049.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODI4OTE0,size_16,color_FFFFFF,t_70#pic_center " alt="Triangle" style="zoom:50%;"></div><h1 id="三角函数及其倒数的图像">    <font color="#A9BFE3">三角函数及其倒数的图像</font></h1><p><br></p><h2 id="sin-x-amp-csc-x">    <div align="center">    <font color="#FFC0BE">sin x &amp; csc x</font>    </div></h2><p><img src="https://img-blog.csdnimg.cn/20200505112809395.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODI4OTE0,size_16,color_FFFFFF,t_70" style="zoom:80%;"></p><h2 id="cos-x-amp-sec-x">    <div align="center"><font color="#FFC0BE">cos x &amp; sec x</font></div></h2><p><img src="https://img-blog.csdnimg.cn/20200505112829334.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODI4OTE0,size_16,color_FFFFFF,t_70" style="zoom:80%;"></p><h2 id="tan-x-amp-cot-x">    <div align="center"><font color="#FFC0BE">tan x &amp; cot x</font></div></h2><p><img src="https://img-blog.csdnimg.cn/20200505113007408.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODI4OTE0,size_16,color_FFFFFF,t_70" style="zoom:80%;"></p><h1 id="三角函数及其反函数的图像">    <font color="#A9BFE3">三角函数及其反函数的图像</font></h1><h2 id="sin-x-amp-arcsin-x">    <div align="center"><font color="#FFC0BE">sin x &amp; arcsin x</font></div></h2><p><img src="https://img-blog.csdnimg.cn/20200505123720721.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODI4OTE0,size_16,color_FFFFFF,t_70" style="zoom:80%;"></p><h2 id="cos-x-amp-arccos-x">    <div align="center"><font color="#FFC0BE">cos x &amp; arccos x</font></div></h2><p><img src="https://img-blog.csdnimg.cn/20200505123432356.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODI4OTE0,size_16,color_FFFFFF,t_70" style="zoom:80%;"></p><h2 id="tan-x-amp-arctan-x">    <div align="center"><font color="#FFC0BE">tan x &amp; arctan x</font></div></h2><p><img src="https://img-blog.csdnimg.cn/20200505124052532.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODI4OTE0,size_16,color_FFFFFF,t_70" style="zoom:80%;"></p><h2 id="函数及其反函数图像关于yx对称">    <div align="center"><font color="#FFC0BE">函数及其反函数图像关于y=x对称</font></div></h2><p><img src="https://img-blog.csdnimg.cn/20200505124405977.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODI4OTE0,size_16,color_FFFFFF,t_70" style="zoom:80%;"></p>]]></content>
-    
-    
-    <summary type="html"> </summary>
-    
-    
-    
-    <category term="三角函数" scheme="http://dayswithvenki.top/categories/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0/"/>
-    
-    
-    <category term="🧮三角函数" scheme="http://dayswithvenki.top/tags/%F0%9F%A7%AE%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>三角函数求导</title>
-    <link href="http://dayswithvenki.top/posts/91357ab3.html"/>
-    <id>http://dayswithvenki.top/posts/91357ab3.html</id>
-    <published>2022-03-14T00:55:19.000Z</published>
-    <updated>2022-07-06T02:04:36.113Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="注三角函数的导数1反三角函数导数的倒数需要注意替换xyeg-sin-x和-arcsin-x">    <font color="#FFC0BE">注：三角函数的导数=1/反三角函数导数的倒数(需要注意替换x,y)</font><br>eg: sin x和 arcsin x<img src="https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/math/证明过程1.png" alt="反函数求导" style="zoom:60%;"></h3><p>​      </p><h1 id="三角函数">    <font color="#A9BFE3">三角函数</font></h1><p><img src="https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/math/函数求导.png" alt="反函数求导"></p><p></p><h1 id="反三角函数">    <font color="#A9BFE3">反三角函数</font></h1><br><img src="https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/math/反函数求导.png" alt="反函数求导" style="zoom:67%;"><p></p>]]></content>
     
     
     <summary type="html"> </summary>

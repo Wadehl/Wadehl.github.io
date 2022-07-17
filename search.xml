@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>Python 多线程</title>
+      <link href="/posts/python-thread.html"/>
+      <url>/posts/python-thread.html</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> threading <span class="hljs-keyword">import</span> Thread<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">func</span>():<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1000</span>):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">'func'</span>, i)<br><br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">'__main__'</span>:<br>    t = Thread(target=func)<span class="hljs-comment"># 创建线程并给线程安排任务</span><br>    t.start()<span class="hljs-comment"># 多线程状态为可以开始工作状态，具体执行时间由CPU决定</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1000</span>):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">'main'</span>, i)<br>        <br></code></pre></td></tr></tbody></table></figure><p>运行结果:</p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs python">funcmain <span class="hljs-number">0</span> <span class="hljs-number">0</span><br>func<br>main <span class="hljs-number">1</span><br>func <span class="hljs-number">2</span><br>func <span class="hljs-number">3</span><br>func <span class="hljs-number">4</span><br> <span class="hljs-number">1</span><br>main func <span class="hljs-number">5</span><br>func <span class="hljs-number">6</span><br>func2<br> <span class="hljs-number">7</span><br>......<br>funcmain  <span class="hljs-number">998992</span><br><br>funcmain  <span class="hljs-number">999993</span><br><br>main <span class="hljs-number">994</span><br>main <span class="hljs-number">995</span><br>main <span class="hljs-number">996</span><br>main <span class="hljs-number">997</span><br>main <span class="hljs-number">998</span><br>main <span class="hljs-number">999</span><br><br></code></pre></td></tr></tbody></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 🐍Python </tag>
+            
+            <tag> 🕷️爬虫 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Python 爬虫实战！</title>
       <link href="/posts/python-exercises.html"/>
       <url>/posts/python-exercises.html</url>
