@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://dayswithvenki.top/posts/expectation.html</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://dayswithvenki.top/posts/summary1.html</loc>
     
     <lastmod>2022-07-28</lastmod>
@@ -389,14 +396,14 @@
   </url>
   
   <url>
-    <loc>http://dayswithvenki.top/tags/%F0%9F%91%BELaTeX/</loc>
+    <loc>http://dayswithvenki.top/tags/%F0%9F%8E%A8%E5%83%8F%E7%B4%A0%E7%94%BB/</loc>
     <lastmod>2022-09-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://dayswithvenki.top/tags/%F0%9F%8E%A8%E5%83%8F%E7%B4%A0%E7%94%BB/</loc>
+    <loc>http://dayswithvenki.top/tags/%F0%9F%91%BELaTeX/</loc>
     <lastmod>2022-09-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -431,6 +438,13 @@
   </url>
   
   <url>
+    <loc>http://dayswithvenki.top/tags/%F0%9F%92%BB%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://dayswithvenki.top/tags/%F0%9F%A7%AE%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0/</loc>
     <lastmod>2022-09-10</lastmod>
     <changefreq>daily</changefreq>
@@ -454,14 +468,14 @@
   </url>
   
   <url>
-    <loc>http://dayswithvenki.top/categories/MarkDown/</loc>
+    <loc>http://dayswithvenki.top/categories/%E6%8F%92%E7%94%BB/</loc>
     <lastmod>2022-09-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://dayswithvenki.top/categories/%E6%8F%92%E7%94%BB/</loc>
+    <loc>http://dayswithvenki.top/categories/MarkDown/</loc>
     <lastmod>2022-09-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

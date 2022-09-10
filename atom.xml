@@ -6,7 +6,7 @@
   <link href="http://dayswithvenki.top/atom.xml" rel="self"/>
   
   <link href="http://dayswithvenki.top/"/>
-  <updated>2022-07-28T15:07:11.302Z</updated>
+  <updated>2022-09-10T08:25:58.587Z</updated>
   <id>http://dayswithvenki.top/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>对未来的小小规划</title>
+    <link href="http://dayswithvenki.top/posts/expectation.html"/>
+    <id>http://dayswithvenki.top/posts/expectation.html</id>
+    <published>2022-09-10T07:51:13.348Z</published>
+    <updated>2022-09-10T08:25:58.587Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://s2.loli.net/2022/09/10/dI12uhYCAXSTger.png" alt="小规划"></p><h2 id="关于网站维护"><a href="#关于网站维护" class="headerlink" title="关于网站维护"></a>关于网站维护</h2><p>​    &nbsp;&nbsp;宝宝呀宝宝，原来自从7月底之后，我就没有再怎么处理过我们网站啦。从8月1号入职开始我才慢慢体会到当工作啥的一起来之后，要维护一个网站的难度真的太大啦！！！特别是当我把很多很多东西都放到了国外的服务商之后，一但被墙，我就要花巨多巨多的时间去维护，功能越多，维护的东西也就越多啦！哎呀呀！！！！</p><p>不过还好啦！也终于把现在有的东西维护好啦！！！然后还学了一些新知识，估计未来慢慢更改，维护成本会越来越低的！！！</p><h2 id="小小规划"><a href="#小小规划" class="headerlink" title="小小规划"></a>小小规划</h2><p>&nbsp;&nbsp;入职之后，特别是接触到许多项目开发后，对从前一些零零散散的知识体系会有一个很不一样的看法，然后现在刚开始，就尽量把前端的各种框架比如：Vue.js,Node.js之类的呀都多多了解清楚，然后把之前一直没有系统训练的HTML语法呀、CSS语法呀、JAVASCRIPT之类的都先做一个系统的学习；然后后端也需要去尽量学习学习，目前正在慢慢学Django的后端框架哇，总之现在对未来的小小希望，也从单纯的前端工程师-&gt;全栈工程师啦！</p><h2 id="认证展示"><a href="#认证展示" class="headerlink" title="认证展示"></a>认证展示</h2><p>&nbsp;&nbsp;最后这里呢，就留给自己展示展示在FreeCodeCamp上面获得的学习证书吧嘎嘎嘎，虽然呢，这些认证意义不大，也非常简单，但是还是放在这儿！留给自己臭美臭美吧！！！！哈哈哈哈哈哈嘎嘎嘎嘎嘎嘎！！！</p><p>1.Responsive Web Design</p><p><img src="https://s2.loli.net/2022/09/10/OBPDCMUIj8xHiv9.jpg" alt="响应式网站" style="zoom: 66%; margin: auto 10px;"></p><p>2.JavaScript 算法和数据结构 （还未完成）</p>]]></content>
+    
+    
+    <summary type="html">About Kevin</summary>
+    
+    
+    
+    
+    <category term="💻前端" scheme="http://dayswithvenki.top/tags/%F0%9F%92%BB%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>一个小小总结</title>
@@ -394,27 +413,6 @@
     
     
     <summary type="html">MarkDown-LaTeX写法 下</summary>
-    
-    
-    
-    <category term="MarkDown" scheme="http://dayswithvenki.top/categories/MarkDown/"/>
-    
-    
-    <category term="👾LaTeX" scheme="http://dayswithvenki.top/tags/%F0%9F%91%BELaTeX/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LaTeX语法(上)</title>
-    <link href="http://dayswithvenki.top/posts/latex1.html"/>
-    <id>http://dayswithvenki.top/posts/latex1.html</id>
-    <published>2022-03-24T08:43:10.790Z</published>
-    <updated>2022-07-06T02:08:52.122Z</updated>
-    
-    <content type="html"><![CDATA[<h1 align="center" id="latex语法">    <font color="#A9BFE3">LateX语法</font></h1><div class="note info simple"><p>参考文献:<a href="https://www.jianshu.com/p/8c46e915c45e">https://www.jianshu.com/p/8c46e915c45e</a></p></div><div class="note primary simple"><p>由于内容过多,分为两篇来写</p><p>下一篇 <a href="http://dayswithvenki.top/posts/latex2.html">http://dayswithvenki.top/posts/latex2.html</a></p></div><h2 id="一-markdown-排版格式">    一、 MarkDown 排版格式</h2><h3 id="块公式排版">    块公式排版</h3><figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span>c = <span class="hljs-keyword">\sqrt</span>{a<span class="hljs-built_in">^</span>{2}+b<span class="hljs-built_in">_</span>{xy}<span class="hljs-built_in">^</span>2+e<span class="hljs-built_in">^</span>{x}} <span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br></code></pre></td></tr></tbody></table></figure><script type="math/tex; mode=display">eg:        c = \sqrt{a^{2}+b_{xy}^2+e^{x}}</script><hr><h2 id="二-latex的公式规则">    二、LaTeX的公式规则</h2><h3 id="1转义">    1)转义</h3><div class="note simple"><p>以下几个字符:# $ % &amp; ~ _ ^ { }有特殊意义，需要表示这些字符时，需要转义，即在每个字符前加上 \ 。<br>eg:    \boxed命令给公式加一个方框。</p></div><figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br>E=mc<span class="hljs-built_in">^</span>2<span class="hljs-keyword">\quad</span> 与 <span class="hljs-keyword">\quad</span><span class="hljs-keyword">\boxed</span>{E=mc<span class="hljs-built_in">^</span>2}<br><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br></code></pre></td></tr></tbody></table></figure><script type="math/tex; mode=display">E=mc^2 \quad与\quad \boxed{E=mc^2}</script><div class="note danger simple"><p>\quad 表示空格</p></div><h2 id="2希腊字母">    2)希腊字母</h2><div class="table-container"><table><thead><tr><th style="text-align:center">希腊字母</th><th style="text-align:center">LaTeX</th><th style="text-align:center">希腊字母</th><th style="text-align:center">LaTeX</th></tr></thead><tbody><tr><td style="text-align:center">α</td><td style="text-align:center">\alpha</td><td style="text-align:center">ν</td><td style="text-align:center">\nu</td></tr><tr><td style="text-align:center">β</td><td style="text-align:center">\beta</td><td style="text-align:center">ξ</td><td style="text-align:center">\xi \Xi</td></tr><tr><td style="text-align:center">γ</td><td style="text-align:center">\gamma</td><td style="text-align:center">ο</td><td style="text-align:center">\omicron</td></tr><tr><td style="text-align:center">δ</td><td style="text-align:center">\delta</td><td style="text-align:center">π</td><td style="text-align:center">\pi</td></tr><tr><td style="text-align:center">ε</td><td style="text-align:center">\varepsilon</td><td style="text-align:center">ρ</td><td style="text-align:center">\rho</td></tr><tr><td style="text-align:center">ζ</td><td style="text-align:center">\zeta</td><td style="text-align:center">σ,∑</td><td style="text-align:center">\sigma \Sigma</td></tr><tr><td style="text-align:center">η</td><td style="text-align:center">\eta</td><td style="text-align:center">τ</td><td style="text-align:center">\tau</td></tr><tr><td style="text-align:center">θ</td><td style="text-align:center">\theta</td><td style="text-align:center">υ</td><td style="text-align:center">\upsilon</td></tr><tr><td style="text-align:center">ι</td><td style="text-align:center">\iota</td><td style="text-align:center">ϕ,φ,Φ</td><td style="text-align:center">\phi \varphi \Phi</td></tr><tr><td style="text-align:center">κ</td><td style="text-align:center">\kappa</td><td style="text-align:center">χ</td><td style="text-align:center">\chi</td></tr><tr><td style="text-align:center">λ</td><td style="text-align:center">\lambda</td><td style="text-align:center">ψ,Ψ</td><td style="text-align:center">\psi \Psi</td></tr><tr><td style="text-align:center">μ</td><td style="text-align:center">\mu</td><td style="text-align:center">ω,Ω</td><td style="text-align:center">\omega \Omega</td></tr></tbody></table></div><h2 id="3-上下标-根号">    3) 上下标、根号</h2><div class="note simple"><p>用^来表示上标<br>用_来表示下标<br>用\sqrt表示根号</p></div><div class="note danger simple"><p>上下标如果多余一个字符或者符号，需要用{}括起来。</p><p>开方写法: \sqrt[开方次数,默认为2]{开方式子}</p></div><p>eg:</p><figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span> <span class="hljs-keyword">\sum</span><span class="hljs-built_in">_</span>{i=1}<span class="hljs-built_in">^</span>n a<span class="hljs-built_in">_</span>i <span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br></code></pre></td></tr></tbody></table></figure><script type="math/tex; mode=display">\sum_{i=1}^n a_i</script><figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span> <span class="hljs-keyword">\sqrt</span>{x}<span class="hljs-keyword">\quad</span> <span class="hljs-keyword">\sqrt</span>[3]{x} <span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br></code></pre></td></tr></tbody></table></figure><script type="math/tex; mode=display">\sqrt{x}\quad \sqrt[3]{x}</script><h2 id="4分数">    4)分数</h2><div class="note simple"><p>分数用\frac表示</p></div><figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span> <span class="hljs-keyword">\frac</span>{1}{2}<span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br></code></pre></td></tr></tbody></table></figure><script type="math/tex; mode=display">\frac{1}{2}</script><h2 id="5运算符">5)运算符</h2><div class="note simple"><p>特殊运算则用以下特殊命令\pm\; \times\; \div\; \cdot\; \cap\; \cup\; \geq\; \leq\; \neq\; \approx\; \equiv</p><script type="math/tex; mode=display">\pm\ \times\ \div\ \cdot\ \cap\ \cup\ \geq\ \leq\ \neq\ \approx\  \equiv\</script></div><div class="note simple"><p>和、积、极限、积分</p><p>\sum  \prod  \lim  \int</p><script type="math/tex; mode=display">\sum \quad \prod \quad \lim \quad \int</script></div><figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span> <br><span class="hljs-keyword">\sum</span><span class="hljs-built_in">_</span>{i=1}<span class="hljs-built_in">^</span>n i <span class="hljs-keyword">\quad</span><br><span class="hljs-keyword">\prod</span><span class="hljs-built_in">_</span>{i=1}<span class="hljs-built_in">^</span>n <span class="hljs-keyword">\quad</span><br><span class="hljs-keyword">\lim</span><span class="hljs-built_in">_</span>{x<span class="hljs-keyword">\to</span>0}x<span class="hljs-built_in">^</span>2 <span class="hljs-keyword">\quad</span><br><span class="hljs-keyword">\int</span><span class="hljs-built_in">_</span>{a}<span class="hljs-built_in">^</span>{b}x<span class="hljs-built_in">^</span>2 dx <span class="hljs-keyword">\quad</span> <br><span class="hljs-keyword">\sum</span><span class="hljs-built_in">_</span>{i=1}<span class="hljs-built_in">^</span>n i <span class="hljs-keyword">\quad</span><br><span class="hljs-keyword">\prod</span><span class="hljs-built_in">_</span>{i=1}<span class="hljs-built_in">^</span>n <span class="hljs-keyword">\quad</span><br><span class="hljs-keyword">\lim</span><span class="hljs-built_in">_</span>{x<span class="hljs-keyword">\to</span>0}x<span class="hljs-built_in">^</span>2 <span class="hljs-keyword">\quad</span><br><span class="hljs-keyword">\int</span><span class="hljs-built_in">_</span>{a}<span class="hljs-built_in">^</span>{b}x<span class="hljs-built_in">^</span>2 dx<br><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br></code></pre></td></tr></tbody></table></figure><script type="math/tex; mode=display">\sum_{i=1}^n i \quad\prod_{i=1}^n \quad\lim_{x\to0}x^2 \quad\int_{a}^{b}x^2 dx \quad \sum_{i=1}^n i \quad\prod_{i=1}^n \quad\lim_{x\to0}x^2 \quad\int_{a}^{b}x^2 dx</script><p><br></p><h2 id="6多重积分">    6)多重积分</h2><div class="note simple"><p>使用如下形式: \int 、\iint 、\iiint 、\iiiint 、 \idotsint</p></div><script type="math/tex; mode=display">\int \quad \iint \quad \iiint \quad \idotsint</script>]]></content>
-    
-    
-    <summary type="html">MarkDown-LaTeX写法 上</summary>
     
     
     
