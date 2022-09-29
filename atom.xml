@@ -6,7 +6,7 @@
   <link href="http://dayswithvenki.top/atom.xml" rel="self"/>
   
   <link href="http://dayswithvenki.top/"/>
-  <updated>2022-09-21T14:56:16.548Z</updated>
+  <updated>2022-09-29T13:30:33.264Z</updated>
   <id>http://dayswithvenki.top/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>小郭和小吴周年快乐！</title>
+    <link href="http://dayswithvenki.top/posts/1stanniversary.html"/>
+    <id>http://dayswithvenki.top/posts/1stanniversary.html</id>
+    <published>2022-09-29T16:00:00.000Z</published>
+    <updated>2022-09-29T13:30:33.264Z</updated>
+    
+    <content type="html"><![CDATA[<div align="center"><audio src="https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/music/1st.mp3" autoplay="autoplay" controls="controls" loop="loop" style="display:none;"></audio></div><p><img src="https://s2.loli.net/2022/09/29/8c4xfWXDPESrzKs.png" alt="周年活动清单.png"></p><h2 id="你好呀小吴宝宝"><a href="#你好呀，小吴宝宝" class="headerlink" title="你好呀，小吴宝宝"></a>你好呀，小吴宝宝</h2><p>​    &nbsp;&nbsp;&nbsp;&nbsp;不知不觉我们就快迎接咱们的一周年啦！</p><p>​    &nbsp;&nbsp;&nbsp;&nbsp;这里的这些只是一个小小的预告呀！更多的内容就等到咱们见面的时候再给你看吧~</p><p><br></p><ol><li>小小拍立得</li><li>今崎烧吃肉肉</li><li>郭崽DEMO小项目<br><img src="https://s2.loli.net/2022/09/29/fObMjlTkhItQAFq.png" alt="image.png"></li><li>.-.  —-  …  . </li><li>—  -.—   …  ..  -.  -.-.  .  .-.  .  .-..  -.—   .-..  —-  …-  .   ..-.  —-  .-.   -.—  —-  ..-</li></ol>]]></content>
+    
+    
+    <summary type="html">1周年啦！这是个小预告哦~</summary>
+    
+    
+    
+    <category term="Days" scheme="http://dayswithvenki.top/categories/Days/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Django数据库操作</title>
@@ -391,27 +410,6 @@
     
     <category term="Days" scheme="http://dayswithvenki.top/categories/Days/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>美化记录</title>
-    <link href="http://dayswithvenki.top/posts/butterfly.html"/>
-    <id>http://dayswithvenki.top/posts/butterfly.html</id>
-    <published>2022-03-28T06:44:25.000Z</published>
-    <updated>2022-07-09T03:46:37.720Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="美化记录"><a href="#美化记录" class="headerlink" title="美化记录"></a><div align="center">美化记录</div></h2><h3 id="toc无法跳转问题"><a href="#TOC无法跳转问题" class="headerlink" title="TOC无法跳转问题"></a>TOC无法跳转问题</h3><div class="note info simple"><div class="hide-block"><button type="button" class="hide-button button--animated" style="background-color: #ee9f63;">预览效果    </button><div class="hide-content"><p>无</p></div></div><p><a href="https://convivae.top/posts/hexo-bo-ke-cai-keng/#%E6%96%B9%E6%B3%95-2">参考文档</a></p></div><h3 id="侧边栏botui"><a href="#侧边栏BOTUI" class="headerlink" title="侧边栏BOTUI"></a>侧边栏BOTUI</h3><div class="note info simple"><div class="hide-block"><button type="button" class="hide-button button--animated" style="background-color: #ee9f63;">预览效果    </button><div class="hide-content"><p><img src="https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/show/botui.png" alt="botui"></p></div></div><p><a href="https://akilar.top/posts/9dc1acf8/">参考文档</a></p></div><h3 id="文章置顶轮换栏"><a href="#文章置顶轮换栏" class="headerlink" title="文章置顶轮换栏"></a>文章置顶轮换栏</h3><div class="note info simple"><div class="hide-block"><button type="button" class="hide-button button--animated" style="background-color: #ee9f63;">预览效果    </button><div class="hide-content"><p><img src="https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/show/swiper.png" alt="swiper"></p></div></div><p><a href="https://zfe.space/post/hexo-swiper.html">参考文档 </a></p></div><h3 id="侧边栏碎碎念页面碎碎念artitalk-pro"><a href="#侧边栏碎碎念-页面碎碎念Artitalk-Pro" class="headerlink" title="侧边栏碎碎念+页面碎碎念Artitalk Pro"></a>侧边栏碎碎念+页面碎碎念Artitalk Pro</h3><div class="note info simple"><div class="hide-block"><button type="button" class="hide-button button--animated" style="background-color: #ee9f63;">预览效果    </button><div class="hide-content"><p><img src="https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/show/artitalk.png" alt="artitalk"></p></div></div><p> <a href="https://akilar.top/posts/f1004b1d/">参考文档</a></p></div><h3 id="标签外挂"><a href="#标签外挂" class="headerlink" title="标签外挂"></a>标签外挂</h3><div class="note info simple"><div class="hide-block"><button type="button" class="hide-button button--animated" style="background-color: #ee9f63;">预览效果    </button><div class="hide-content"><p>无</p></div></div><p><a href="https://akilar.top/posts/615e2dec/">参考文档</a> </p></div><h3 id="右键菜单"><a href="#右键菜单" class="headerlink" title="右键菜单"></a>右键菜单</h3><div class="note info simple"><div class="hide-block"><button type="button" class="hide-button button--animated" style="background-color: #ee9f63;">预览效果    </button><div class="hide-content"><p><img src="https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/show/rightmenu.png" alt="rightmenu"></p></div></div><p><a href="https://dorakika.cn/p/20220303.html">参考文档</a> </p></div><h3 id="作者介绍"><a href="#作者介绍" class="headerlink" title="作者介绍"></a>作者介绍</h3><div class="note info simple"><div class="hide-block"><button type="button" class="hide-button button--animated" style="background-color: #ee9f63;">预览效果    </button><div class="hide-content"><p><img src="https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/show/author.png" alt="author"></p></div></div><p><a href="https://akilar.top/posts/e5cda1b6/">参考文档</a> </p></div><h3 id="首页磁贴"><a href="#首页磁贴" class="headerlink" title="首页磁贴"></a>首页磁贴</h3><div class="note info simple"><div class="hide-block"><button type="button" class="hide-button button--animated" style="background-color: #ee9f63;">预览效果    </button><div class="hide-content"><p><img src="https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/show/magnet.png" alt="magnet"></p></div></div><p><a href="https://akilar.top/posts/a9131002/">参考文档</a> </p></div><h3 id="custom-beautify"><a href="#Custom-Beautify" class="headerlink" title="Custom Beautify"></a>Custom Beautify</h3><div class="note info simple"><div class="hide-block"><button type="button" class="hide-button button--animated" style="background-color: #ee9f63;">内容记录    </button><div class="hide-content"><p>·阿里IconFont引入 </p><p>·侧边栏透明</p><p>·公告小人 </p><p>·页脚不同时间不同显示的柴柴 </p><p>·页脚皮卡丘 </p><p>·网站各种像素画</p><p>·文字/图标颜色自定义，字体像素风</p><p>·加载动画: Loading/日夜转换</p><p>·夜间模式背景流星</p></div></div></div>]]></content>
-    
-    
-    <summary type="html">网页美化记录</summary>
-    
-    
-    
-    <category term="HEXO" scheme="http://dayswithvenki.top/categories/HEXO/"/>
-    
-    
-    <category term="🦋Butterfly" scheme="http://dayswithvenki.top/tags/%F0%9F%A6%8BButterfly/"/>
     
   </entry>
   
