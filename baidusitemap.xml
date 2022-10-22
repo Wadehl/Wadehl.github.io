@@ -2,7 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://dayswithvenki.top/posts/1stanniversary.html</loc>
-    <lastmod>2022-09-29</lastmod>
+    <lastmod>2022-10-22</lastmod>
+  </url>
+  <url>
+    <loc>http://dayswithvenki.top/posts/lovevenki.html</loc>
+    <lastmod>2022-10-22</lastmod>
   </url>
   <url>
     <loc>http://dayswithvenki.top/posts/install-django.html</loc>
@@ -27,10 +31,6 @@
   <url>
     <loc>http://dayswithvenki.top/posts/summary1.html</loc>
     <lastmod>2022-07-28</lastmod>
-  </url>
-  <url>
-    <loc>http://dayswithvenki.top/posts/lovevenki.html</loc>
-    <lastmod>2022-07-23</lastmod>
   </url>
   <url>
     <loc>http://dayswithvenki.top/posts/python-thread.html</loc>
@@ -121,11 +121,11 @@
     <lastmod>2022-07-02</lastmod>
   </url>
   <url>
-    <loc>http://dayswithvenki.top/posts/weeks1.html</loc>
+    <loc>http://dayswithvenki.top/posts/weeks2.html</loc>
     <lastmod>2022-05-19</lastmod>
   </url>
   <url>
-    <loc>http://dayswithvenki.top/posts/weeks2.html</loc>
+    <loc>http://dayswithvenki.top/posts/weeks1.html</loc>
     <lastmod>2022-05-19</lastmod>
   </url>
   <url>
