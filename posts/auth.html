@@ -1,0 +1,561 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>前端认证方式 | Venkiˡᵒᵛᵉ💕</title><meta name="keywords" content="💻前端"><meta name="author" content="Kevin"><meta name="copyright" content="Kevin"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Cookie、Session、Token与JWT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端认证方式">
+<meta property="og:url" content="http://dayswithvenki.top/posts/auth.html">
+<meta property="og:site_name" content="Venkiˡᵒᵛᵉ💕">
+<meta property="og:description" content="Cookie、Session、Token与JWT">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/background/us.png">
+<meta property="article:published_time" content="2023-04-11T13:06:02.141Z">
+<meta property="article:modified_time" content="2023-04-12T14:29:58.447Z">
+<meta property="article:author" content="Kevin">
+<meta property="article:tag" content="💻前端">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/background/us.png"><link rel="shortcut icon" href="https://s2.loli.net/2022/07/07/QfZ418l9mhsnIri.png"><link rel="canonical" href="http://dayswithvenki.top/posts/auth"><link rel="preconnect" href="//jsdelivr.pai233.top"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://npm.elemecdn.com/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/css/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Kevin","link":"链接: ","source":"来源: Venkiˡᵒᵛᵉ💕","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#A9BFE3","bgDark":"#121212","position":"top-center"},
+  source: {
+    jQuery: 'https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://npm.elemecdn.com/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://npm.elemecdn.com/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js',
+      css: 'https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '前端认证方式',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-04-12 22:29:58'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    document.addEventListener('pjax:complete', detectApple)})(window)</script><link rel="apple-touch-icon" href="https://s2.loli.net/2022/07/07/QfZ418l9mhsnIri.png"><meta name="apple-mobile-web-app-title" content="Days With Venki"><link rel="bookmark" href="/https://s2.loli.net/2022/07/07/QfZ418l9mhsnIri.png"><link rel="apple-touch-icon-precomposed" sizes="180x180" href="/https://s2.loli.net/2022/07/07/QfZ418l9mhsnIri.png" ><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous"><script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script><meta name="baidu-site-verification" content="code-Ty1ovHtLL3" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhheo/JS-Heo/bb/showbb_in_index.css"><script src="https://jsdelivr.pai233.top/npm/leancloud-storage@4.10.0/dist/av-min.js"></script><meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /><script src="/js/SAO-Notify.js" async></script><link rel="stylesheet" href="/css/bilibiliBanner.css"  media="defer" onload="this.media='screen'"><link rel="preconnect" href="https://s1.hdslb.com/" /><link rel="stylesheet" href="//s1.hdslb.com/bfs/static/jinkela/long/font/regular.css" media="all" onload="this.media='all'" /><link rel="stylesheet" href="//s1.hdslb.com/bfs/static/jinkela/long/font/medium.css" media="all" onload="this.media='all'" /><link rel="stylesheet" href="/css/Card-Widget.css"  media="defer" onload="this.media='all'"><link rel="stylesheet" href="/css/rightmenu.css"><link rel="stylesheet" href="/css/copyright.css"><link rel="stylesheet" href="/css/card_botui.css" /><link rel="stylesheet" href="/css/custom/tag_cate.css"><link href="//netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"><link rel="stylesheet" href="/css/universe.css"><link rel="stylesheet" href="https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/css/mytime.css"><link defer rel="stylesheet" href="/css/customm.css" ><link defer rel="stylesheet" href="https://at.alicdn.com/t/font_3259644_offkbjsfgvd.css?spm=a313x.7781069.1998910419.51&file=font_3259644_offkbjsfgvd.css"<link rel="stylesheet" href="https://jsdelivr.pai233.top/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/macWhite.css"><link rel="stylesheet" href="/self/pojoaque.css"><link defer rel="stylesheet" href="/css/sidebar.css"><link defer rel="stylesheet" href="https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/css/cursors1.css" ><link rel="stylesheet" href="//jsdelivr.pai233.top/gh/highlightjs/cdn-release@11.5.0/build/styles/default.min.css"><svg aria-hidden="true" style="position:absolute; overflow:hidden; width:0; height:0"><symbol id="icon-sun" viewBox="0 0 1024 1024"><path d="M960 512l-128 128v192h-192l-128 128-128-128H192v-192l-128-128 128-128V192h192l128-128 128 128h192v192z" fill="#FFD878" p-id="8420"></path><path d="M736 512a224 224 0 1 0-448 0 224 224 0 1 0 448 0z" fill="#FFE4A9" p-id="8421"></path><path d="M512 109.248L626.752 224H800v173.248L914.752 512 800 626.752V800h-173.248L512 914.752 397.248 800H224v-173.248L109.248 512 224 397.248V224h173.248L512 109.248M512 64l-128 128H192v192l-128 128 128 128v192h192l128 128 128-128h192v-192l128-128-128-128V192h-192l-128-128z" fill="#4D5152" p-id="8422"></path><path d="M512 320c105.888 0 192 86.112 192 192s-86.112 192-192 192-192-86.112-192-192 86.112-192 192-192m0-32a224 224 0 1 0 0 448 224 224 0 0 0 0-448z" fill="#4D5152" p-id="8423"></path></symbol><symbol id="icon-moon" viewBox="0 0 1024 1024"><path d="M611.370667 167.082667a445.013333 445.013333 0 0 1-38.4 161.834666 477.824 477.824 0 0 1-244.736 244.394667 445.141333 445.141333 0 0 1-161.109334 38.058667 85.077333 85.077333 0 0 0-65.066666 135.722666A462.08 462.08 0 1 0 747.093333 102.058667a85.077333 85.077333 0 0 0-135.722666 65.024z" fill="#FFB531" p-id="11345"></path><path d="M329.728 274.133333l35.157333-35.157333a21.333333 21.333333 0 1 0-30.165333-30.165333l-35.157333 35.157333-35.114667-35.157333a21.333333 21.333333 0 0 0-30.165333 30.165333l35.114666 35.157333-35.114666 35.157334a21.333333 21.333333 0 1 0 30.165333 30.165333l35.114667-35.157333 35.157333 35.157333a21.333333 21.333333 0 1 0 30.165333-30.165333z" fill="#030835" p-id="11346"></path></symbol></svg><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-artitalk-pro/lib/card.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Venkiˡᵒᵛᵉ💕" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div id="loading-box"><div class="pokeball-back"></div><div class="pokeball-loading"><div class="pokeball" id="pokeball-normal"></div><div class="pokeball" id="pokeball-great"></div><div class="pokeball" id="pokeball-ultra"></div><div class="pokeball" id="pokeball-master"></div><div class="pokeball" id="pokeball-safari"></div></div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://art.pixilart.com/f81838db87fe.png" onerror="onerror=null;src='https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/background/error.png'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">50</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw iconfont icon-outline-lovely"></i><span> Venki&amp;Kevin</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/artitalk/"><i class="fa-fw iconfont icon-chat"></i><span> 一起碎碎念</span></a></li><li><a class="site-page child" href="/Days/days"><i class="fa-fw iconfont icon-vuesax-outline-instagram"></i><span> Venki&amp;Kevin's Days</span></a></li><li><a class="site-page child" href="/Days/todo"><i class="fa-fw iconfont icon-cat"></i><span> Venki's ToDo</span></a></li><li><a class="site-page child" href="/Days/do"><i class="fa-fw iconfont icon-dog"></i><span> Kevin's ToDo</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw iconfont icon-vuesax-outline-archive"></i><span> 归档</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw iconfont icon-vuesax-outline-task-square"></i><span> 时轴</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw iconfont icon-fenlei"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw iconfont icon-tag"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw iconfont icon-outline-user-tag"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/random/"><span> 🚝随便逛逛</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><!--img#post-cover(src=url_for(top_img) alt='cover')--><!--!=partial('includes/header/nav', {}, {cache: true})--><nav id="nav"><span id="name"><!--a#site-name(onclick='btf.scrollToDest(0, 500)' data-title=pagedescr) #[=subtitle] --><a id='te-home' href='/'>🏠</a><a id="site-name" href="/" data-title="Cookie、Session、Token与JWT">Venkiˡᵒᵛᵉ💕</a></span><div id="he-plugin-simple"></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw iconfont icon-outline-lovely"></i><span> Venki&amp;Kevin</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/artitalk/"><i class="fa-fw iconfont icon-chat"></i><span> 一起碎碎念</span></a></li><li><a class="site-page child" href="/Days/days"><i class="fa-fw iconfont icon-vuesax-outline-instagram"></i><span> Venki&amp;Kevin's Days</span></a></li><li><a class="site-page child" href="/Days/todo"><i class="fa-fw iconfont icon-cat"></i><span> Venki's ToDo</span></a></li><li><a class="site-page child" href="/Days/do"><i class="fa-fw iconfont icon-dog"></i><span> Kevin's ToDo</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw iconfont icon-vuesax-outline-archive"></i><span> 归档</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw iconfont icon-vuesax-outline-task-square"></i><span> 时轴</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw iconfont icon-fenlei"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw iconfont icon-tag"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw iconfont icon-outline-user-tag"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/random/"><span> 🚝随便逛逛</span></a></div></div></div><div id="nav-right"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div></div><div id="nav-dark"><div id="darkmode_navswitch"><a class="icon-V hidden" onclick="switchNightMode()" title="浅色和深色模式转换"><svg width="21" height="21" viewBox="0 0 800 800"><use id="modeicon" xlink:href="#icon-moon"></use></svg></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">前端认证方式</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-04-11T13:06:02.141Z" title="发表于 2023-04-11 21:06:02">2023-04-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-04-12T14:29:58.447Z" title="更新于 2023-04-12 22:29:58">2023-04-12</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>7分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/posts/auth.html#post-comment"><span id="twikoo-count"></span></a></span></div></div></div><article class="post-content" id="article-container"><h2 id="认证cookie-session-token-jwtjson-web-token"><a href="#认证：Cookie、Session、Token、JWT（JSON-Web-Token）" class="headerlink" title="认证：Cookie、Session、Token、JWT（JSON Web Token）"></a>认证：Cookie、Session、Token、JWT（JSON Web Token）</h2><h3 id="1-cookie"><a href="#1-Cookie" class="headerlink" title="1. Cookie"></a>1. Cookie</h3><ul>
+<li>弥补HTTP没有状态的不足（无法判断两次HTTP请求是否来源于同一个用户）</li>
+<li>存储在客户端中</li>
+<li>不可跨域（依靠域名区分）</li>
+</ul>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 获取全部Cookie</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">getAllCookies</span>(<span class="hljs-params"></span>) {<br>    <span class="hljs-keyword">let</span> cookies = {};<br>    <span class="hljs-keyword">const</span> all = <span class="hljs-variable language_">document</span>.<span class="hljs-property">cookie</span>;<br>    <span class="hljs-keyword">if</span>(all) {<br>        <span class="hljs-keyword">const</span> list = all.<span class="hljs-title function_">split</span>(<span class="hljs-string">"; "</span>);<br>        list.<span class="hljs-title function_">forEach</span>(<span class="hljs-function"><span class="hljs-params">cookie</span>=&gt;</span>{<br>            <span class="hljs-keyword">const</span> cookieArr = cookie.<span class="hljs-title function_">split</span>(<span class="hljs-string">"="</span>);<br>            cookies[cookieArr[<span class="hljs-number">0</span>]] = <span class="hljs-built_in">decodeURIComponent</span>(cookieArr[<span class="hljs-number">1</span>]);<br>        });<br>    }<br>    <span class="hljs-keyword">return</span> cookies;<br>}<br></code></pre></td></tr></tbody></table></figure>
+<h3 id="2-session"><a href="#2-Session" class="headerlink" title="2. Session"></a>2. Session</h3><ul>
+<li>弥补HTTP没有状态的不足（无法判断两次HTTP请求是否来源于同一个用户）</li>
+<li>存储在服务端中</li>
+<li>基于Cookie实现（SessionId）</li>
+</ul>
+<h4 id="请求流程"><a href="#请求流程" class="headerlink" title="请求流程"></a>请求流程</h4><ol>
+<li>用户第一次请求服务器的时候，服务端会根据用户输入的信息生成对应的Session</li>
+<li>服务端在本次请求返回Session对应的SessionId给客户端(Set-Cookie)</li>
+<li>浏览器会将SessionId存入Cookie中，同时Cookie会记录SessionId对应的Domain</li>
+<li>用户第二次访问服务器的时候，请求将自动将Cookie中的SessionId发送到服务端上，服务端根据该SessionId查找对应的用户信息，若找不到，说明Session不存在或者已过期，要求用户重新输入信息。</li>
+</ol>
+<blockquote>
+<h3 id="session的一个使用场景"><a href="#Session的一个使用场景" class="headerlink" title="Session的一个使用场景"></a>Session的一个使用场景</h3><ul>
+<li>Nginx负载均衡的时候：<ul>
+<li>登录在服务器1，请求个人信息在服务器2，那么登录后请求个人信息又需要重新登录。</li>
+<li>用户将商品a加入购物车，而这个请求发送到服务器1，又将商品b加入购物车，这个请求发送到服务器2，最后订单结算，请求发送到服务器1，那么付款的时候，能看到的就只剩下商品a。</li>
+</ul>
+</li>
+</ul>
+<h3 id="使用session的时候需要考虑的问题"><a href="#使用Session的时候需要考虑的问题" class="headerlink" title="使用Session的时候需要考虑的问题"></a>使用Session的时候需要考虑的问题</h3><ul>
+<li>Session存储在服务器中的时候，如果用户使用量较大，需要定期清理过期的<code>Session</code></li>
+<li>网站使用<strong>集群部署</strong>的时候，会遇到多台服务器共享<code>Session</code>的问题（即上面所述）</li>
+<li>多个服务器共享Session，还需要考虑<code>Cookie</code>跨域的问题</li>
+<li><code>SessionId</code>一般存储在<code>Cookie</code>中，但是如果浏览器禁止<code>Cookie</code>或不支持<code>Cookie</code>，一般把SessionId跟在URL参数后面重写URL（<code>Session</code>不一定需要<code>Cookie</code>）</li>
+<li>移动端对<code>Cookie</code>的支持不是很好，<code>Session</code>一般依赖于<code>Cookie</code>，所以一般移动端应用<code>Token</code></li>
+</ul>
+<h3 id="关闭浏览器后session就永远消失了吗"><a href="#关闭浏览器后Session就永远消失了吗" class="headerlink" title="关闭浏览器后Session就永远消失了吗"></a>关闭浏览器后Session就永远消失了吗</h3><p>​    <strong>不正确的</strong>。是因为大部分<code>Session</code>依赖于<code>Cookie</code>实现<code>SessionId</code>的保存，而关闭浏览器这个<code>Cookie</code>可能消失，这样再次链接服务器就会找不到原来的<code>Session</code>。如果服务器设置的<code>Cookie</code>通过硬盘或者其他手段改写<code>HTTP</code>请求头，把原来的<code>SessionId</code>发送给服务器，仍然能打开原来的<code>Session</code>。</p>
+<p>​    因为<strong>关闭浏览器并不会导致<code>Session</code>被删除，所以服务器才会给<code>Session</code>设置一个过期的时间，当<code>Session</code>到期后，服务器才会删除<code>Session</code>节省空间</strong>。</p>
+<h3 id="session与cookie"><a href="#Session与Cookie" class="headerlink" title="Session与Cookie"></a>Session与Cookie</h3><ul>
+<li><strong>安全性</strong>：Session存在服务端更加安全，Cookie设置HttpOnly可以一定程度避免XSS攻击</li>
+<li><strong>存取值类型</strong>：Cookie只支持字符串类型，Session可以为任意类型</li>
+<li><strong>有效期</strong>：Cookie可以设置为长时间保存，Session一般在客户端关闭或者设定的较短期限到期</li>
+<li><strong>存储大小与个数限制</strong>:Cookie一般单个限制为4KB，限定个数与浏览器有关；而Session一般不存在限制，但是如果访问较多的话会给服务端带来性能影响</li>
+</ul>
+</blockquote>
+<h3 id="3-token"><a href="#3-Token" class="headerlink" title="3. Token"></a>3. Token</h3><p>一种简单的生成Token：</p>
+<p>​    uuid(用户唯一标识)+时间戳+sign(hash处理token前几位生成的十六进制字符串)</p>
+<p><strong>特点</strong>：</p>
+<ul>
+<li>服务端无状态化，可扩展性良好</li>
+<li>支持移动端设备</li>
+<li>安全</li>
+<li>token完全由应用管理，可以避开同源策略</li>
+</ul>
+<h4 id="31-access-token"><a href="#3-1-Access-Token" class="headerlink" title="3.1 Access Token"></a>3.1 Access Token</h4><ol>
+<li>客户端发送用户名密码等验证信息</li>
+<li>服务端收到请求后进行验证，验证通过后，根据登录凭证加密为Access Token后与数据一起返回给客户端</li>
+<li>客户端收到Token后，一般存储到localStorage中</li>
+<li>客户端再次发起请求时，把Token放在请求头中</li>
+<li>服务端收到请求后，查询数据库信息验证Token，验证成功后返回数据</li>
+</ol>
+<h4 id="32-refresh-token"><a href="#3-2-Refresh-Token" class="headerlink" title="3.2 Refresh Token"></a>3.2 Refresh Token</h4><p>AccessToken存在过期时间（服务端存在数据库内），当Access Token过期后，用户需要重新输入验证信息。为了方便用户，还有一个Refresh Token。</p>
+<ol>
+<li>客户端发送用户名密码等验证信息</li>
+<li>服务端收到请求后进行验证，验证通过后，根据登录凭证加密为AccessToken与RefreshToken(RefreshToken过期时限&gt;AccessToken)后与数据一起返回给客户端</li>
+<li>客户端收到Token后存放在本地(一般为localStorage)</li>
+<li>当客户端发送请求的时候将Access Token传输到服务端，服务端进行校验与过期检查，如果没有过期则返回数据</li>
+<li>如果AccessToken过期，服务端向客户端发送过期错误，此时客户端将RefreshToken发送到服务端进行检验</li>
+<li>如果RefreshToken未过期，则发送新的Access Token与 Refresh Token给客户端；否则，客户端需要重新输入登录验证信息</li>
+</ol>
+<blockquote>
+<h3 id="token与session"><a href="#Token与Session" class="headerlink" title="Token与Session"></a>Token与Session</h3><ul>
+<li>Session用于保持会话，使服务端状态化；而Token是访问资源（API）的一个凭证令牌，会使服务端无状态化</li>
+<li>Token的安全性比Session要好，每个请求都会对签名解密，能够防止监听以及重复攻击，而Session必须依赖链路层保障通讯安全</li>
+<li>二者不冲突，可以同时存在</li>
+</ul>
+<h3 id="为什么从cookie转到token"><a href="#为什么从Cookie转到Token" class="headerlink" title="为什么从Cookie转到Token"></a>为什么从Cookie转到Token</h3><p>​    原因在于之前，<code>JQuery</code>前端时代是前后端<strong>不分离</strong>的，后端在模板渲染前会判断路由是否有权限来决定是否跳转。登录的时候，后端只需要设置<code>SetCookie</code>这个响应头，<code>Cookie</code>就能够存储起来并且自动发送。</p>
+<p>​    但是现在的前后端分离，通常需要进行<strong>跨域</strong>操作，此时<code>Cookie</code>就有更多的限制了，因此我们更愿意使用手动管理权限的Token方式。</p>
+</blockquote>
+<h3 id="4-jwt"><a href="#4-JWT" class="headerlink" title="4. JWT"></a>4. JWT</h3><p>JWT原理是在服务器认证后，生成一个JSON对象，发送给用户，这个JSON对象包含用户的信息，之后用户每次发送请求的时候，都需要携带上JWT，为了防止数据被篡改，服务器在生成对象的时候，会加上签名。</p>
+<h4 id="41-jwt的数据结构"><a href="#4-1-JWT的数据结构" class="headerlink" title="4.1 JWT的数据结构"></a>4.1 JWT的数据结构</h4><p><code>Header.Payload.Signature</code>三部分用.链接</p>
+<p><img src="https://www.wangbase.com/blogimg/asset/201807/bg2018072303.jpg" alt="img"></p>
+<ul>
+<li><p>Header</p>
+<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">{</span><br>    <span class="hljs-attr">"alg"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"HS256"</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">"typ"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"JWT"</span><br><span class="hljs-punctuation">}</span><br></code></pre></td></tr></tbody></table></figure>
+<p><code>alg</code>表示签名的算法<code>HMAC SHA256</code>，<code>typ</code>表示该token的类型，<code>JWT</code>统一为<code>JWT</code>。</p>
+</li>
+<li><p>Payload</p>
+<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">{</span><br>    <span class="hljs-string">"iss (issuer)"</span>：<span class="hljs-string">"签发人"</span><br>	<span class="hljs-string">"exp (expiration time)"</span>：<span class="hljs-string">"过期时间"</span><br>	<span class="hljs-string">"sub (subject)"</span>：<span class="hljs-string">"主题"</span><br>	<span class="hljs-string">"aud (audience)"</span>：<span class="hljs-string">"受众"</span><br>	<span class="hljs-string">"nbf (Not Before)"</span>：<span class="hljs-string">"生效时间"</span><br>	<span class="hljs-string">"iat (Issued At)"</span>：<span class="hljs-string">"签发时间"</span><br>	<span class="hljs-string">"jti (JWT ID)"</span>：<span class="hljs-string">"编号"</span><br><span class="hljs-punctuation">}</span><br></code></pre></td></tr></tbody></table></figure>
+<p>除了上面7个官方字段外，还可以定义一些私有字段。</p>
+</li>
+<li><p>Signature</p>
+<p>指定密钥(secret)后，按下面的公式生成。</p>
+<p><code>signature = HMACSHA256(base64UrlEncode(Header)+"."+(base64UrlEncode(Payload), secret)</code></p>
+</li>
+<li><p>BASE64URL算法</p>
+<p>由于<code>JWT</code>作为令牌可能需要放在URL中，因为<code>+</code>、<code>/</code>、<code>=</code>在URL中有特殊的含义，所以要被替换掉，具体算法: <code>=</code>省略、<code>+</code>换位<code>-</code>，<code>/</code>替换为<code>_</code>。</p>
+</li>
+</ul>
+<h4 id="42-jwt的使用"><a href="#4-2-JWT的使用" class="headerlink" title="4.2 JWT的使用"></a>4.2 JWT的使用</h4><ol>
+<li><p>当客户端收到服务端返回的<code>JWT</code>的时候，可以存储在<code>Cookie</code>或<code>localStorage</code>中，在之后的每一次请求都需要带上<code>JWT</code>。当<code>JWT</code>在<code>Cookie</code>中的时候将自动发送（不允许跨域），所以一般会放在HTTP的请求头<code>Authorization</code>中。</p>
+<p>一种使用方法：<code>Authorization: Bearer + 'JWT'</code>(调用OpenAI API的时候就是将api_key放在请求头中)</p>
+<p>另一种：跨域的时候，<code>JWT</code>放在<code>POST</code>请求的BODY中。</p>
+</li>
+</ol>
+<h4 id="43-jwt的特点"><a href="#4-3-JWT的特点" class="headerlink" title="4.3 JWT的特点"></a>4.3 JWT的特点</h4><ol>
+<li><code>JWT</code>默认不加密，但是可以生成原始<code>Token</code>后，使用密钥进行加密。</li>
+<li><code>JWT</code>不加密的时候，由于里面的数据是可以被解码的,可以被直接获取，所以不应该在<code>JWT</code>内写入秘密数据,并且永远使用<strong>强密码哈希算法</strong>处理密码。</li>
+<li><code>JWT</code>除了用于认证外，也可以用于信息的交换，可以减少数据库的查询次数。</li>
+<li><code>JWT</code>的最大缺点在于，服务端并不会保存<code>Session</code>信息，因此无法在过程中废除<code>Token</code>或者更改<code>JWT</code>的权限。就是说，<code>JWT</code>一旦签发，在到期前都始终有效，除非服务器部署额外的逻辑。</li>
+<li><code>JWT</code>本身包含了认证信息，如果泄露，那么任何人都可以获取该令牌的权限。为了减少盗用，<code>JWT</code>的有效期一般被设置的很短，对于一些重要的信息，使用的时候应该再次对用户认证。</li>
+<li>为了减少盗用，<code>JWT</code>不应该使用<code>HTTP</code>传输，而是应该使用<code>HTTPS</code>。</li>
+</ol>
+<blockquote>
+<h3 id="token与jwt的区别"><a href="#TOKEN与JWT的区别" class="headerlink" title="TOKEN与JWT的区别"></a>TOKEN与JWT的区别</h3><ul>
+<li>相同：<ul>
+<li>都是访问资源的令牌</li>
+<li>都可以记录用户的信息</li>
+<li>都使服务器无状态化</li>
+<li>都是只有验证成功后，客户端才能访问服务端上的受保护的资源</li>
+</ul>
+</li>
+<li>不同：<ul>
+<li>Token：服务端验证客户端发送的Token的时候，还需要查询数据库获取用户的信息，并且验证Token是否有效。</li>
+<li>JWT：Payload与Token加密后存储在客户端中，服务端只需要使用密钥解密并检验（JWT自己实现）即可，不需要或较少查询数据库，因为JWT包含了用户信息与加密的数据。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__title"><span class="post-copyright-info"><h>前端认证方式</h></span></div><div class="post-copyright__type"><span class="post-copyright-info"><a href="http://dayswithvenki.top/posts/auth.html">http://dayswithvenki.top/posts/auth.html</a></span></div><div class="post-copyright-m"><div class="post-copyright-m-info"><div class="post-copyright-a" style="display: inline-block;width: 120px"><h>作者</h><div class="post-copyright-cc-info"><h>Kevin</h></div></div><div class="post-copyright-c" style="display: inline-block;width: 120px"><h>发布于</h><div class="post-copyright-cc-info"><h>2023-04-11</h></div></div><div class="post-copyright-u" style="display: inline-block;width: 120px"><h>更新于</h><div class="post-copyright-cc-info"><h>2023-04-12</h></div></div><div class="post-copyright-c" style="display: inline-block;width: 120px"><h>许可协议</h><div class="post-copyright-cc-info"><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a rel="noopener" target="_blank" title="CC BY 4.0" href="https://creativecommons.org/licenses/by/4.0/deed.zh">CC BY 4.0</a></div></div></div></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%F0%9F%92%BB%E5%89%8D%E7%AB%AF/">💻前端</a></div><div class="post_share"><div class="social-share" data-image="https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/background/us.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://npm.elemecdn.com/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://npm.elemecdn.com/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><!--a(href=url_for(prev.path))--><!--a(href=url_for(prev.path) title=prev.title)--><a href="javascript:void(0);" onclick="SAONotify(&quot;Prev Post&quot;,&quot;是否跳转至上一篇：&lt;br&gt;GoLang学习记录&quot;,&quot;pjax.loadUrl('/posts/golang-1.html')&quot;)" title="GoLang学习记录"><i class="fas fa-chevron-left pre-icon"><div class="prev-label">上一篇</div></i></a><div class="pagination-card"><img class="prev-cover" src="https://s2.loli.net/2023/04/05/WarLpyjwSkBC7ZN.png" onerror="onerror=null;src='https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/background/error.png'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">GoLang学习记录</div></div></div></div><div class="next-post pull-right"><!--a(href=url_for(next.path))--><!--a(href=url_for(next.path) title=next.title)--><a href="javascript:void(0);" onclick="SAONotify(&quot;Next Post&quot;,&quot;是否跳转至下一篇：&lt;br&gt;&quot;,&quot;pjax.loadUrl('/posts/http.html')&quot;)" title=""><i class="fas fa-chevron-right next-icon"><div class="next-label">下一篇</div></i></a><div class="pagination-card"><img class="next-cover" src="https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/background/us.png" onerror="onerror=null;src='https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/background/error.png'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info"></div></div></div></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div align="center"><iframe id="codepen-game1" src="/page/pikachu/catch/" frameborder="0" width=“100%” scrolling=“no” style="width: 230px; height: 250px;"> </iframe></div><div class="card-widget card-info"><div class="cols"><div class="col"><div class="container"><div class="front avatarPanel"><div class="inner"><div class="player-title">٩(๑❛ᴗ❛๑)Hello Venki!</div><div class="player-avatar"><img src="https://art.pixilart.com/f81838db87fe.png" onerror="this.onerror=null;this.src='https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/background/error.png'" alt="avatar"/></div></div></div><div class="back attributesPanel"><div class="inner"><div class="player-lv">LV.997</div><div class="player-name">Kevin</div><div class="attributes-value"><div class="attributes-value-item"><a href="/archives/"><div class="attributes">文章</div><div class="value-bar"><div class="value-bar-fill" style="width:50.00%"><div class="value-bar-fill-in" style="background: rgba(89, 230, 54,0.6)"></div></div></div><span>50/100</span></a></div><div class="attributes-value-item"><a href="/tags/"><div class="attributes">标签</div><div class="value-bar"><div class="value-bar-fill" style="width:13.00%"><div class="value-bar-fill-in" style="background: rgba(224, 20, 20, 0.6)"></div></div></div><span>13/100</span></a></div><div class="attributes-value-item"><a href="/categories/"><div class="attributes">分类</div><div class="value-bar"><div class="value-bar-fill" style="width:6.00%"><div class="value-bar-fill-in" style="background: rgba(30, 97, 226, 0.6)"></div></div></div><span>6/100</span></a></div></div></div></div></div></div><div class="col"><div class="container"><div class="front descriptionPanel"><div class="inner"><div class="player_description">Hope One Day I Could Be A Full Stack Engineer & A UI Designer</div><div class="play-bottom"></div><iframe id="cat" src="/page/cat/" frameborder="0" style="width:120.6 px; "> </iframe></div></div><div class="back buttonPanel"><div class="inner"><a class="button--animated" id="card-info-btn" href="http://dayswithvenki.top"><i class="iconfont icon-vuesax-outline-home-2"></i><span>返回主页</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Wadehl/" target="_blank" title="Github"><i class="iconfont icon-github"></i></a><a class="social-icon" href="https://www.pixilart.com/kevin-venki" target="_blank" title="Pixilart"><i class="iconfont icon-kirby"></i></a><a class="social-icon" href="https://www.iconfont.cn/user/detail?spm=a313x.7781069.1998910419.d78986de3&amp;uid=10420464&amp;nid=xcwrBNaEKsRH" target="_blank" title="IconFont"><i class="iconfont icon-penguin"></i></a></div><div class="play-bottom"></div></div></div></div></div></div></div><!--<iframe id="cat2">(src="/page/cat2/", frameborder="0", style="width:120.6 px; ") </iframe>--><div class="card-widget card-announcement"><div class="item-headline"><span>公告</span></div><!--.announcement_content!= theme.aside.card_announcement.content--><iframe id="banner-page" src="/page/pikachu/hello/" frameborder="0" style="width:auto;height:auto;"> </iframe><div class="xpand" style="height:200px;"><canvas class="illo" width="800" height="800" style="max-width: 200px; max-height: 200px; touch-action: none; width: 640px; height: 640px;"></canvas></div><!-- script(src='https://jsdelivr.pai233.top/gh/xiaopengand/blogCdn@latest/xzxr/twopeople1.js')--><script src="https://jsdelivr.pai233.top/gh/xiaopengand/blogCdn@latest/xzxr/zdog.dist.js"></script><script id="rendered-js" src="https://jsdelivr.pai233.top/gh/xiaopengand/blogCdn@latest/xzxr/twopeople.js"></script><style>.card-widget.card-announcement {
+margin: 0;
+align-items: center;
+justify-content: center;
+text-align: left;
+}
+canvas {
+display: block;
+margin: 0 auto;
+//cursor: move;
+}</style></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A4%E8%AF%81cookie-session-token-jwtjson-web-token"><span class="toc-number">1.</span> <span class="toc-text">认证：Cookie、Session、Token、JWT（JSON Web Token）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-cookie"><span class="toc-number">1.1.</span> <span class="toc-text">1. Cookie</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-session"><span class="toc-number">1.2.</span> <span class="toc-text">2. Session</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%B7%E6%B1%82%E6%B5%81%E7%A8%8B"><span class="toc-number">1.2.1.</span> <span class="toc-text">请求流程</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#session%E7%9A%84%E4%B8%80%E4%B8%AA%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">1.3.</span> <span class="toc-text">Session的一个使用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8session%E7%9A%84%E6%97%B6%E5%80%99%E9%9C%80%E8%A6%81%E8%80%83%E8%99%91%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">1.4.</span> <span class="toc-text">使用Session的时候需要考虑的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%97%AD%E6%B5%8F%E8%A7%88%E5%99%A8%E5%90%8Esession%E5%B0%B1%E6%B0%B8%E8%BF%9C%E6%B6%88%E5%A4%B1%E4%BA%86%E5%90%97"><span class="toc-number">1.5.</span> <span class="toc-text">关闭浏览器后Session就永远消失了吗</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#session%E4%B8%8Ecookie"><span class="toc-number">1.6.</span> <span class="toc-text">Session与Cookie</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-token"><span class="toc-number">1.7.</span> <span class="toc-text">3. Token</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#31-access-token"><span class="toc-number">1.7.1.</span> <span class="toc-text">3.1 Access Token</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#32-refresh-token"><span class="toc-number">1.7.2.</span> <span class="toc-text">3.2 Refresh Token</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#token%E4%B8%8Esession"><span class="toc-number">1.8.</span> <span class="toc-text">Token与Session</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BB%8Ecookie%E8%BD%AC%E5%88%B0token"><span class="toc-number">1.9.</span> <span class="toc-text">为什么从Cookie转到Token</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-jwt"><span class="toc-number">1.10.</span> <span class="toc-text">4. JWT</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#41-jwt%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-number">1.10.1.</span> <span class="toc-text">4.1 JWT的数据结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#42-jwt%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">1.10.2.</span> <span class="toc-text">4.2 JWT的使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#43-jwt%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-number">1.10.3.</span> <span class="toc-text">4.3 JWT的特点</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#token%E4%B8%8Ejwt%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.11.</span> <span class="toc-text">TOKEN与JWT的区别</span></a></li></ol></li></ol></div></div><div class="card-widget card-botui"><div class="card-content" style="height:320px;"><div class="item-headline"><a href='./about/'>聊天窗 </a></div><div class="botui-app-container" id="hello-akilar" style="width:100%;padding:0.5px"><bot-ui><div class="facemain"><figure><div><span class="face">Talk With Kevin？</span><span class="face"><a href="javascript:void(0);" onclick="botui_init()">Welcome!</a></span></div></figure></div></bot-ui></div></div><!--<div ailgn="center"><iframe id="codepen-game1" src="https://dayswithvenki.top/page/plane/" frameborder="0" width=“100%” scrolling=“no” style="width: 230px; height: 250px;"> </iframe></div>--></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2023 <i class="iconfont icon-pikachu"></i> Kevin</div><!--<iframe id="pikachu-catch" src="/page/pikachu/surf/" frameborder="0" width=“100%” scrolling=“no” style="width: 230px; height: 250px;"> </iframe>--></div><!--<div id="footercopy" align="center"><font style="font-size:13px; color:black">©2022&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kevin</font></div>--><div id="crowd" align="center"> <iframe id="crowd" src="/page/crowd/" frameborder="0" width=“100%” scrolling=“no” style="width: 100%; height: 549px; "> </iframe> </div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><a class="icon-V hidden" onclick="switchNightMode()" title="浅色和深色模式转换"><svg width="25" height="25" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon"></use></svg></a><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><img class="heo-guli"  width='35px' title="返回顶部" onclick ="btf.scrollToDest(0,500)" style="filter: drop-shadow(0 12px 12px #ee7d7936)" src="https://npm.elemecdn.com/guli-heo/action/guli-action-find.gif"></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><a class="rightMenu-item" href="javascript:window.history.back();"><i class="iconfont icon-back1"></i></a><a class="rightMenu-item" href="javascript:window.history.forward();"><i class="iconfont icon-forward1"></i></a><a class="rightMenu-item" href="javascript:window.location.reload();"><i class="iconfont icon-update"></i></a><a class="rightMenu-item" href="javascript:kk.scrollToTop();"><i class="iconfont icon-home"></i></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-text"><a class="rightMenu-item" href="javascript:kk.copySelect();"><i class="fa fa-clone"></i><span>复制</span></a></div><div class="rightMenu-group rightMenu-line"><a class="rightMenu-item" href="javascript:kk.switchDarkMode();"><i class="iconfont icon-dark"></i><span>昼夜切换</span></a><a class="rightMenu-item" href="javascript:kk.switchReadMode();"><i class="iconfont icon-read1"></i><span>阅读模式</span></a></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://jsdelivr.pai233.top/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://npm.elemecdn.com/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.bootcdn.net/ajax/libs/pangu/4.0.7/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (true){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())
+window.addEventListener('load',()=> {preloader.endLoading()})
+  setTimeout(function(){preloader.endLoading();}, 200);</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><script>(()=>{
+  const $countDom = document.getElementById('twikoo-count')
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://comments.dayswithvenki.top',
+      region: ''
+    }, null))
+  }
+
+  const getCount = () => {
+    twikoo.getCommentsCount({
+      envId: 'https://comments.dayswithvenki.top',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      $countDom.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const loadTwikoo = (bool = false) => {
+    if (typeof twikoo === 'object') {
+      init()
+      bool && $countDom && setTimeout(getCount,0)
+    } else {
+      getScript('https://cdn.bootcdn.net/ajax/libs/twikoo/1.5.11/twikoo.all.min.js').then(()=> {
+        init()
+        bool && $countDom && setTimeout(getCount,0)
+      })
+    }
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo(true)
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script src="https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js"></script><script src="/js/fixed-pagination.js" async></script><script src="/js/rightmenu.js"></script><script src="/js/fontcolor.js"></script><script src="https://npm.elemecdn.com/vue@2.6.11"></script><canvas id="universe"></canvas><script defer src="/js/universe.js"></script><script src="/js/sun_moon.js"></script><script src="//jsdelivr.pai233.top/gh/highlightjs/cdn-release@11.5.0/build/highlight.min.js""></script><script defer type="text/javascript" src="https://jsdelivr.pai233.top/gh/Wadehl/web-data/MyBlogdata/js/FunnyTitle.js"></script><script src="/js/switchDarkMode.js"></script><script src="/js/botui.js"></script><script data-pjax src="/js/botui_init.js"></script><script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script async src="/js/weather.js"></script><script src="/js/console.js"></script><script src="https://npm.elemecdn.com/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://npm.elemecdn.com/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="小郭,爱,小吴,爱" data-fontsize="15px" data-random="false" async="async"></script><script src="https://npm.elemecdn.com/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.removeEventListener('scroll', window.tocScrollFn)
+  window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function card_artitalk_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-shuo"><div class="card-content" style="height:auto;min-height:280px;"><div class="item-headline"><span><a href="/artitalk/" title="artitalk page link">碎碎念</a></span><a id="cardVisual" style="cursor:pointer;float:right;display:none;" onclick="cardVisual()">编辑</a></div><div id="artitalk_main" style="width:100%;height:100%;padding:1px"></div><div align="center"><iframe src="https://dayswithvenki.top/page/kirby/index.html" frameborder="0"  scrolling="no" style="width: 230px; height: 250px;"></iframe></div></div></div>';
+    console.log('已挂载card_artitalk');
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html);
+    (()=>{
+      const init = () => {
+        new Artitalk(Object.assign({
+          appId: 'Nk4uSMcoCSidzdza3z826TIp-MdYXbMMI',
+          appKey: 'ozRGd6U9FoykayBeArLSttGY',
+        }, {"serverURL":"https://shuoshuo.dayswithvenki.top","lang":"zh","pageSize":1,"color1":"#002FA7","color2":"#002FA7","atEmoji":{"像素狗":"https://tva1.sinaimg.cn/large/006BdrJkgy1gtapoqhskxg3034034q49.gif","像素猫1":"https://tva1.sinaimg.cn/large/006BdrJkgy1gtapor5mpeg303403474q.gif","像素猫2":"https://tva1.sinaimg.cn/large/006BdrJkgy1gtapp45ziqg3034034aag.gif","Kuromi1":"https://s2.loli.net/2022/04/16/uyBGd7PfHzC3DU4.png","Kuromi2":"https://s2.loli.net/2022/04/16/jsvJhRXlEVuqbNd.png","Kuromi3":"https://s2.loli.net/2022/04/16/PKM73usNTOWXhaz.png","善逸":"https://s2.loli.net/2022/07/07/QfZ418l9mhsnIri.png","炭治郎":"https://s2.loli.net/2022/07/07/rREuz3ioM8H2B65.png","猪猪":"https://s2.loli.net/2022/07/07/I8CRjkedUMwvDPi.png"}} ))
+      }
+      if (typeof Artitalk === 'function') {
+        init()
+      } else {
+        getScript('https://npm.elemecdn.com/artitalk').then(init)
+      }
+    })()
+    }
+  var elist = '/artitalk/,/posts/'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    card_artitalk_injector_config();
+  }
+  else if (epage === cpage){
+    card_artitalk_injector_config();
+  }
+  </script><script async src="https://npm.elemecdn.com/hexo-butterfly-artitalk-pro/lib/card_visual.js"></script><script data-pjax>
+  function butterfly_footer_beautify_injector_config(){
+    var parent_div_git = document.getElementById('footer-wrap');
+    var item_html = '<div id="workboard"></div>';
+    console.log('已挂载butterfly_footer_beautify')
+    parent_div_git.insertAdjacentHTML("beforeend",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_footer_beautify_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_footer_beautify_injector_config();
+  }
+  </script><script async src="/js/runtime.js"></script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body></html>
